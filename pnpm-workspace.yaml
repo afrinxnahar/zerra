@@ -1,0 +1,7 @@
+# pnpm 11 blocks dependency build scripts unless they're listed here.
+allowBuilds:
+  esbuild: true            # used by tsx (npm run worker / seed / pregen)
+  msgpackr-extract: true   # optional native speedup for bullmq
+  unrs-resolver: true      # used by eslint-config-next
+  sharp: true              # next image processing
+  "@tailwindcss/oxide": true
