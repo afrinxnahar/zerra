@@ -5,7 +5,7 @@ import { createServerClient } from "@supabase/ssr";
 import { z } from "zod";
 import { env, hasSupabaseAuth } from "./env";
 import { db } from "./store";
-import type { Role, User } from "./types";
+import { CATEGORIES, type Role, type User } from "./types";
 
 /**
  * Supabase Auth owns identity (email/password + OAuth). Zerra keeps one profile row per
@@ -60,21 +60,29 @@ export const unauthorized = () => Response.json({ error: "sign in required" }, {
 
 export const ProfileInput = z.discriminatedUnion("role", [
   z.object({ role: z.literal("creator"), name: z.string().trim().min(1, "Add your channel name.").max(80) }),
-  z.object({ role: z.literal("brand"), brand_id: z.string().min(1, "Pick your brand.") }),
+  z.object({
+    role: z.literal("brand"),
+    brand_name: z.string().trim().min(1, "Add your brand name.").max(80),
+    category: z.enum(CATEGORIES, { error: "Pick your brand's category." }),
+    website: z
+      .string()
+      .trim()
+      .max(300)
+      .refine((v) => v === "" || /^https?:\/\/\S+$/.test(v), "Website must be a full URL starting with https://")
+      .default(""),
+    description: z.string().trim().min(1, "Describe your brand in a sentence.").max(280),
+  }),
 ]);
 
-/** Creates the profile (and the creator row for creators). Returns null if the brand doesn't exist. */
+/** Creates the profile plus what it owns: a creator row, or a new (unpublished) brand. */
 export async function createProfile(id: string, email: string, input: z.infer<typeof ProfileInput>) {
-  if (input.role === "brand" && !(await db().getBrand(input.brand_id))) return null;
   const creator_id = input.role === "creator" ? (await db().upsertCreator({ name: input.name })).id : null;
+  const brand_id =
+    input.role === "brand"
+      ? (await db().createBrand({ name: input.brand_name, category: input.category, website: input.website, description: input.description })).id
+      : null;
   try {
-    return await db().createUser({
-      id,
-      email,
-      role: input.role,
-      creator_id,
-      brand_id: input.role === "brand" ? input.brand_id : null,
-    });
+    return await db().createUser({ id, email, role: input.role, creator_id, brand_id });
   } catch (e) {
     // two sign-in callbacks raced: keep the first profile
     if (e instanceof Error && e.message === "profile exists") return db().getUser(id);

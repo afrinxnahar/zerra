@@ -1,3 +1,21 @@
+/** Shared by brands (one) and creators (several): it's what matching runs on. */
+export const CATEGORIES = [
+  "food & drink",
+  "beauty",
+  "fashion",
+  "fitness",
+  "tech",
+  "gaming",
+  "home & kitchen",
+  "lifestyle",
+  "travel",
+  "finance",
+  "parenting",
+  "pets",
+] as const;
+
+export type Socials = { instagram?: string; tiktok?: string; youtube?: string; x?: string };
+
 export type Brand = {
   id: string;
   slug: string;
@@ -19,6 +37,10 @@ export type Brand = {
   accent: string;
   /** objects that would compete with the composited product, kept out of generated scenes */
   scene_avoid: string;
+  description: string;
+  socials: Socials;
+  /** only published brands show up for creators */
+  published: boolean;
 };
 
 export type Creator = {
@@ -29,6 +51,8 @@ export type Creator = {
   channel_url: string | null;
   voice: string;
   aspect: "9:16" | "16:9";
+  /** what brands match on, see CATEGORIES */
+  categories: string[];
   created_at?: string;
 };
 
@@ -41,9 +65,28 @@ export type Pitch = {
   status: PitchStatus;
   selected_variant_id: string | null;
   message: string | null;
+  /** the creator's asking rate for running this ad */
+  rate_usd: number | null;
+  /** set when the pitch answers a brand's request */
+  request_id: string | null;
   created_at: string;
   sent_at: string | null;
 };
+
+export type RequestStatus = "open" | "accepted" | "declined";
+
+/** A brand asking a creator for a spec ad pitch. */
+export type PitchRequest = {
+  id: string;
+  brand_id: string;
+  creator_id: string;
+  brief: string;
+  budget_usd: number | null;
+  status: RequestStatus;
+  created_at: string;
+};
+
+export type PitchRequestWithDetails = PitchRequest & { brand: Brand; creator: Creator };
 
 // audio runs before motion so every shot is cut to the exact length of its voiceover line
 export type Step = "script" | "visuals" | "audio" | "motion" | "mux";
@@ -96,6 +139,7 @@ export type Variant = {
 export type PitchWithDetails = Pitch & {
   brand: Brand;
   creator: Creator;
+  request: PitchRequest | null;
   variants: Variant[];
 };
 

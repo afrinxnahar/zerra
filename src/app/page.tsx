@@ -32,8 +32,7 @@ const SCRIPT = [
 ];
 
 export default async function Home() {
-  const [user, brands] = await Promise.all([getUser(), db().listBrands()]);
-  const hero = brands.find((b) => b.slug === "olipop") || brands[0];
+  const [user, brands] = await Promise.all([getUser(), db().listBrands({ published: true })]);
   const start = (role: "creator" | "brand") => (user ? homeFor(user) : `/signup?role=${role}`);
 
   return (
@@ -89,8 +88,8 @@ export default async function Home() {
             <div className="relative aspect-[9/16] w-full max-w-[220px] overflow-hidden rounded-2xl border border-line">
               <img src="/mock/frame-1.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
               <img
-                src={hero.cutout_path}
-                alt={hero.product_name}
+                src="/brands/olipop.png"
+                alt="OLIPOP Orange Cream"
                 className="absolute left-1/2 top-[60%] h-[36%] w-auto -translate-x-1/2 -translate-y-1/2 object-contain"
               />
               <span className="absolute inset-x-3 bottom-3 rounded-md bg-black/60 px-2 py-1 text-center text-[11px] text-white backdrop-blur">

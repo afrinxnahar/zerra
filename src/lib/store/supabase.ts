@@ -1,7 +1,7 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { env } from "../env";
-import type { Brand, Creator, PitchWithDetails, User, Variant } from "../types";
-import type { Store } from "./index";
+import type { Brand, Creator, PitchRequest, PitchRequestWithDetails, PitchWithDetails, User, Variant } from "../types";
+import { brandSlug, type Store } from "./index";
 
 let sb: SupabaseClient | null = null;
 export function supabase() {
@@ -10,7 +10,9 @@ export function supabase() {
 }
 
 // pitches <-> pitch_variants have two FKs (pitch_id, selected_variant_id): name the one to embed through
-const PITCH_SELECT = "*, brand:brands(*), creator:creators(*), variants:pitch_variants!pitch_variants_pitch_id_fkey(*)";
+const PITCH_SELECT =
+  "*, brand:brands(*), creator:creators(*), request:pitch_requests(*), variants:pitch_variants!pitch_variants_pitch_id_fkey(*)";
+const REQUEST_SELECT = "*, brand:brands(*), creator:creators(*)";
 
 function must<T>(res: { data: T | null; error: { message: string } | null }): T {
   if (res.error) throw new Error(res.error.message);
@@ -24,11 +26,23 @@ function sortVariants(p: PitchWithDetails) {
 export function supabaseStore(): Store {
   const s = () => supabase();
   return {
-    async listBrands() {
-      return must(await s().from("brands").select("*").order("name")) as Brand[];
+    async listBrands(filter) {
+      let q = s().from("brands").select("*");
+      if (filter?.published) q = q.eq("published", true);
+      return must(await q.order("name")) as Brand[];
     },
     async getBrand(id) {
       return (must(await s().from("brands").select("*").eq("id", id).maybeSingle()) as Brand | null) || null;
+    },
+    async createBrand(basics) {
+      const slug = brandSlug(basics.name);
+      return must(await s().from("brands").insert({ id: slug, slug, ...basics }).select("*").single()) as Brand;
+    },
+    async updateBrand(id, patch) {
+      const rest = { ...patch }; // the id is the slug, it never changes
+      delete rest.id;
+      delete rest.slug;
+      return must(await s().from("brands").update(rest).eq("id", id).select("*").single()) as Brand;
     },
     async getCreator(id) {
       return (must(await s().from("creators").select("*").eq("id", id).maybeSingle()) as Creator | null) || null;
@@ -40,9 +54,13 @@ export function supabaseStore(): Store {
       const row = must(await s().from("creators").upsert(c).select("*").single());
       return row as unknown as Creator;
     },
-    async createPitch({ creator_id, brand_id, angles }) {
+    async createPitch({ creator_id, brand_id, angles, rate_usd = null, message = null, request_id = null }) {
       const pitch = must(
-        await s().from("pitches").insert({ creator_id, brand_id, status: "generating" }).select("id").single(),
+        await s()
+          .from("pitches")
+          .insert({ creator_id, brand_id, status: "generating", rate_usd, message, request_id })
+          .select("id")
+          .single(),
       ) as { id: string };
       must(
         await s()
@@ -88,6 +106,21 @@ export function supabaseStore(): Store {
       const res = await s().from("users").insert(u).select("*").single();
       if (res.error?.code === "23505") throw new Error("profile exists"); // unique_violation
       return must(res) as User;
+    },
+    async createRequest(r) {
+      return must(await s().from("pitch_requests").insert(r).select("*").single()) as PitchRequest;
+    },
+    async getRequest(id) {
+      return (must(await s().from("pitch_requests").select("*").eq("id", id).maybeSingle()) as PitchRequest | null) || null;
+    },
+    async listRequests({ brand_id, creator_id }) {
+      let q = s().from("pitch_requests").select(REQUEST_SELECT);
+      if (brand_id) q = q.eq("brand_id", brand_id);
+      if (creator_id) q = q.eq("creator_id", creator_id);
+      return must(await q.order("created_at", { ascending: false })) as PitchRequestWithDetails[];
+    },
+    async updateRequest(id, patch) {
+      must(await s().from("pitch_requests").update(patch).eq("id", id).select("id"));
     },
   };
 }

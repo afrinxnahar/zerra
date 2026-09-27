@@ -3,7 +3,11 @@ import { z } from "zod";
 import { db } from "@/lib/store";
 import { getUser, unauthorized } from "@/lib/auth";
 
-const Body = z.object({ variant_id: z.string().min(1), message: z.string().max(500).optional() });
+const Body = z.object({
+  variant_id: z.string().min(1),
+  message: z.string().max(500).optional(),
+  rate_usd: z.number().min(0).max(1_000_000).nullable().optional(),
+});
 
 /** Creator picked the best variant: the pitch lands in the brand's inbox. */
 export async function POST(req: NextRequest, ctx: RouteContext<"/api/pitches/[id]/send">) {
@@ -20,6 +24,7 @@ export async function POST(req: NextRequest, ctx: RouteContext<"/api/pitches/[id
     status: "sent",
     selected_variant_id: v.id,
     message: parsed.data.message?.trim() || null,
+    rate_usd: parsed.data.rate_usd ?? null,
     sent_at: new Date().toISOString(),
   });
   return Response.json(await db().getPitch(id));

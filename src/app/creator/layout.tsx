@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 
 const LINKS = [
   { href: "/creator", label: "Discover brands" },
+  { href: "/creator/requests", label: "Requests" },
   { href: "/creator/pitches", label: "My pitches" },
   { href: "/creator/profile", label: "Profile" },
 ];

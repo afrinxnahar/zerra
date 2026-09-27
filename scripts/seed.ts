@@ -23,7 +23,9 @@ async function main() {
   const sb = supabase();
   console.log(`Seeding ${env.supabaseUrl}`);
 
-  must(await sb.from("brands").upsert(brands.map((b) => ({ id: b.slug, ...b }))), "brands");
+  // demo brands are complete, so they go live right away (self-serve brands start as drafts)
+  const rows = brands.map((b) => ({ id: b.slug, ...b, description: b.tagline, published: true }));
+  must(await sb.from("brands").upsert(rows), "brands");
   console.log(`✓ ${brands.length} brands`);
 
   if ((await sb.storage.getBucket(env.supabaseBucket)).error) {
@@ -49,6 +51,9 @@ async function main() {
     must(await sb.from("pitches").update({ selected_variant_id: p.selected_variant_id }).eq("id", p.id), "pitch pick");
   }
   console.log(`\n✓ ${demo.pitches.length} pitches, ${variants.length} takes (videos in Storage bucket "${env.supabaseBucket}")`);
+
+  must(await sb.from("pitch_requests").upsert(demo.requests), "requests");
+  console.log(`✓ ${demo.requests.length} open brand request`);
 
   const password = process.env.DEMO_PASSWORD;
   if (!password) {

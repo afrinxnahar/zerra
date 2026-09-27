@@ -6,26 +6,36 @@ product in the creator's style and voice. The brand opens a playable pitch, not 
 
 Built for the Livepeer Agent hackathon (Atumera). Livepeer Agent is the whole generation pipeline.
 
-## The one flow
+## The flows
 
-1. Sign up as a **creator** (channel name) or a **brand** (pick one of the seeded brands).
-2. Creator sets up a profile (niche, style notes, channel link, voice, 9:16 or 16:9).
-3. Creator picks a brand in **Discover brands** and hits **Generate spec ad ×3**.
-4. Three takes (Relatable moment, Straight value, Playful) run through the pipeline in parallel.
-5. Creator picks the best take in **My pitches**, adds a note and sends it.
-6. It shows up playable in that brand's **Inbox**.
+**Brands** sign up with the basics (name, category, website, one line about them), then finish in
+**Brand settings**: product photo (background removed and trimmed automatically), product facts,
+socials, and **Publish**. Only published brands are visible to creators.
+
+**Creators** set a profile (niche, categories, style notes, channel, voice, 9:16 or 16:9). Then either:
+
+- **Pitch a brand**: pick one in **Discover brands** and hit **Generate spec ad ×3**, or
+- **Answer a request**: a brand found them in **Find creators** (matched on category) and sent a brief
+  and budget. In **Requests** the creator sets their rate and generates the spec ad right there.
+
+Either way, three takes (Relatable moment, Straight value, Playful) run through the pipeline in
+parallel. The creator picks the best take in **My pitches**, sets a rate and note, and sends it. It shows
+up playable in the brand's **Inbox** with the rate.
 
 ## Pages
 
 | Route | Who | What |
 |---|---|---|
 | `/` | everyone | Landing page |
-| `/login`, `/signup` | signed out | Email + password, `?role=brand` preselects brand signup |
-| `/creator` | creator | Discover brands, generate a 3-take pitch |
-| `/creator/pitches` | creator | Pitches in progress, pick a take, send |
-| `/creator/profile` | creator | Voice, style, format, generation status |
-| `/brand` | brand | Inbox of playable spec ads |
-| `/brand/profile` | brand | The product, facts and cutout creators work with |
+| `/login`, `/signup` | signed out | Email + password or SSO, `?role=brand` preselects brand signup |
+| `/onboarding` | first SSO sign-in | Pick creator or brand (brands enter their basics) |
+| `/creator` | creator | Discover published brands, generate a 3-take pitch |
+| `/creator/requests` | creator | Brand requests: set a rate and generate, or decline |
+| `/creator/pitches` | creator | Pitches in progress, pick a take, set rate, send |
+| `/creator/profile` | creator | Categories, voice, style, format, generation status |
+| `/brand` | brand | Inbox of playable spec ads with the creator's rate |
+| `/brand/creators` | brand | Creators matching the brand's category, request a pitch |
+| `/brand/profile` | brand | Brand settings: product photo, facts, socials, publish |
 
 Auth is **Supabase Auth**: email + password and SSO through any OAuth provider you enable (Google,
 GitHub, ...). `src/proxy.ts` refreshes the session cookie, `src/lib/auth.ts` reads it. Each auth user
@@ -82,9 +92,9 @@ npm run dev                        # http://localhost:3000
    npx supabase db push --db-url "postgresql://postgres.<ref>:<password>@aws-0-<region>.pooler.supabase.com:5432/postgres"
    ```
 
-   No CLI? Paste `supabase/migrations/001_init.sql` then `002_users.sql` into the SQL editor instead.
-3. Push all the dummy data (brands, the demo creator, 4 pitches with 12 finished takes, their videos
-   into Storage, and demo logins). Safe to re-run.
+   No CLI? Paste the files in `supabase/migrations/` into the SQL editor in order (001, 002, 003).
+3. Push all the dummy data (11 published brands, the demo creator, 4 pitches with 12 finished takes, their videos
+   into Storage, one open brand request, and demo logins). Safe to re-run.
 
    ```bash
    npm run seed

@@ -1,4 +1,3 @@
-import { db } from "@/lib/store";
 import { env } from "@/lib/env";
 import { SignupForm } from "@/components/AuthForm";
 
@@ -6,7 +5,6 @@ export const metadata = { title: "Sign up" };
 
 export default async function SignupPage({ searchParams }: PageProps<"/signup">) {
   const { role } = await searchParams;
-  const brands = await db().listBrands();
   return (
     <>
       <div className="mb-8 text-center">
@@ -15,7 +13,7 @@ export default async function SignupPage({ searchParams }: PageProps<"/signup">)
         <p className="mt-3 text-sm text-muted">Creators send spec ads. Brands watch them.</p>
       </div>
       <div className="card p-6 sm:p-8">
-        <SignupForm brands={brands} initialRole={role === "brand" ? "brand" : "creator"} providers={env.authProviders} />
+        <SignupForm initialRole={role === "brand" ? "brand" : "creator"} providers={env.authProviders} />
       </div>
     </>
   );

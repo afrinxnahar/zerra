@@ -2,8 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import seedBrands from "../../data/brands.json";
-import type { Brand, Creator, Pitch, PitchWithDetails, User, Variant } from "../types";
-import type { Store } from "./index";
+import type { Brand, Creator, Pitch, PitchRequest, PitchWithDetails, User, Variant } from "../types";
+import { brandSlug, type Store } from "./index";
 
 /**
  * Zero-setup JSON file store used when Supabase isn't configured.
@@ -11,17 +11,29 @@ import type { Store } from "./index";
  * for anything shared or when running the separate BullMQ worker.
  */
 
-type DB = { users: User[]; creators: Creator[]; pitches: Pitch[]; variants: Variant[] };
+type DB = {
+  users: User[];
+  brands: Brand[];
+  creators: Creator[];
+  pitches: Pitch[];
+  variants: Variant[];
+  requests: PitchRequest[];
+};
 const FILE = path.join(process.cwd(), ".data", "db.json");
 
-const brands: Brand[] = (seedBrands as Omit<Brand, "id">[]).map((b) => ({ ...b, id: b.slug }));
+// the demo brands, copied into db.json on first write
+const seeded = () =>
+  (seedBrands as Omit<Brand, "id" | "description" | "socials" | "published">[]).map(
+    (b): Brand => ({ ...b, id: b.slug, description: b.tagline, socials: {}, published: true }),
+  );
 
 function read(): DB {
+  // tables added after the first db.json files were written start empty (brands start seeded)
+  const empty = { users: [], brands: seeded(), creators: [], pitches: [], variants: [], requests: [] };
   try {
-    // users was added after the first db.json files were written
-    return { users: [], ...JSON.parse(fs.readFileSync(FILE, "utf8")) };
+    return { ...empty, ...JSON.parse(fs.readFileSync(FILE, "utf8")) };
   } catch {
-    return { users: [], creators: [], pitches: [], variants: [] };
+    return empty;
   }
 }
 function write(d: DB) {
@@ -48,19 +60,39 @@ const now = () => new Date().toISOString();
 function details(d: DB, p: Pitch): PitchWithDetails {
   return {
     ...p,
-    brand: brands.find((b) => b.id === p.brand_id)!,
+    brand: d.brands.find((b) => b.id === p.brand_id)!,
     creator: d.creators.find((c) => c.id === p.creator_id)!,
+    request: d.requests.find((r) => r.id === p.request_id) || null,
     variants: d.variants.filter((v) => v.pitch_id === p.id).sort((a, b) => a.idx - b.idx),
   };
 }
 
 export function localStore(): Store {
   return {
-    async listBrands() {
-      return brands;
+    async listBrands(filter) {
+      return read().brands.filter((b) => !filter?.published || b.published);
     },
     async getBrand(id) {
-      return brands.find((b) => b.id === id) || null;
+      return read().brands.find((b) => b.id === id) || null;
+    },
+    async createBrand(basics) {
+      return mutate((d) => {
+        const slug = brandSlug(basics.name);
+        const b: Brand = {
+          id: slug, slug, tagline: "", product_name: "", spoken_name: "", product_url: "", product_description: "",
+          product_facts: [], product_image_url: "", cutout_path: "", cutout_url: null, cutout_aspect: 0.7,
+          accent: "#888888", scene_avoid: "", socials: {}, published: false, ...basics,
+        };
+        d.brands.push(b);
+        return b;
+      });
+    },
+    async updateBrand(id, patch) {
+      return mutate((d) => {
+        const b = d.brands.find((x) => x.id === id);
+        if (!b) throw new Error("brand not found");
+        return Object.assign(b, patch, { id: b.id, slug: b.slug });
+      });
     },
     async getCreator(id) {
       return read().creators.find((c) => c.id === id) || null;
@@ -82,6 +114,7 @@ export function localStore(): Store {
           channel_url: null,
           voice: "Tessa (en)",
           aspect: "9:16",
+          categories: [],
           created_at: now(),
           ...c,
         } as Creator;
@@ -89,7 +122,7 @@ export function localStore(): Store {
         return created;
       });
     },
-    async createPitch({ creator_id, brand_id, angles }) {
+    async createPitch({ creator_id, brand_id, angles, rate_usd = null, message = null, request_id = null }) {
       return mutate((d) => {
         const p: Pitch = {
           id: crypto.randomUUID(),
@@ -97,7 +130,9 @@ export function localStore(): Store {
           brand_id,
           status: "generating",
           selected_variant_id: null,
-          message: null,
+          message,
+          rate_usd,
+          request_id,
           created_at: now(),
           sent_at: null,
         };
@@ -161,6 +196,33 @@ export function localStore(): Store {
         const created: User = { ...u, created_at: now() };
         d.users.push(created);
         return created;
+      });
+    },
+    async createRequest(r) {
+      return mutate((d) => {
+        const created: PitchRequest = { ...r, id: crypto.randomUUID(), status: "open", created_at: now() };
+        d.requests.push(created);
+        return created;
+      });
+    },
+    async getRequest(id) {
+      return read().requests.find((r) => r.id === id) || null;
+    },
+    async listRequests({ brand_id, creator_id }) {
+      const d = read();
+      return d.requests
+        .filter((r) => (!brand_id || r.brand_id === brand_id) && (!creator_id || r.creator_id === creator_id))
+        .sort((a, b) => b.created_at.localeCompare(a.created_at))
+        .map((r) => ({
+          ...r,
+          brand: d.brands.find((b) => b.id === r.brand_id)!,
+          creator: d.creators.find((c) => c.id === r.creator_id)!,
+        }));
+    },
+    async updateRequest(id, patch) {
+      await mutate((d) => {
+        const r = d.requests.find((x) => x.id === id);
+        if (r) Object.assign(r, patch);
       });
     },
   };

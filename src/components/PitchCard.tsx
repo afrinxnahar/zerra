@@ -5,6 +5,7 @@ import type { Brand, PitchWithDetails, Variant } from "@/lib/types";
 import { STEPS } from "@/lib/types";
 import { api } from "./api";
 import { AdPlayer } from "./AdPlayer";
+import { usd } from "./Form";
 
 const STEP_LABEL: Record<string, string> = {
   script: "Script",
@@ -17,6 +18,7 @@ const STEP_LABEL: Record<string, string> = {
 export function PitchCard({ pitch, onChange }: { pitch: PitchWithDetails; onChange: () => void }) {
   const [pick, setPick] = useState<string | null>(pitch.selected_variant_id);
   const [message, setMessage] = useState(pitch.message || "");
+  const [rate, setRate] = useState(pitch.rate_usd?.toString() ?? "");
   const [sending, setSending] = useState(false);
   const sent = pitch.status === "sent";
   const ready = pitch.variants.filter((v) => v.status === "done");
@@ -25,7 +27,7 @@ export function PitchCard({ pitch, onChange }: { pitch: PitchWithDetails; onChan
     if (!pick) return;
     setSending(true);
     try {
-      await api.send(pitch.id, pick, message);
+      await api.send(pitch.id, pick, message, rate.trim() === "" ? null : Number(rate));
       onChange();
     } finally {
       setSending(false);
@@ -40,11 +42,21 @@ export function PitchCard({ pitch, onChange }: { pitch: PitchWithDetails; onChan
           <div className="font-semibold">
             {pitch.brand.name} <span className="font-normal text-muted">· {pitch.brand.product_name}</span>
           </div>
-          <div className="text-xs text-muted">{new Date(pitch.created_at).toLocaleString()}</div>
+          <div className="text-xs text-muted">
+            {new Date(pitch.created_at).toLocaleString()}
+            {pitch.request && <span className="ml-2 rounded-full bg-panel-2 px-2 py-0.5 text-text">Requested by brand</span>}
+          </div>
         </div>
         <StatusPill status={pitch.status} />
       </div>
 
+      {pitch.request && (
+        <p className="border-b border-line px-4 py-3 text-sm text-muted">
+          <span className="eyebrow mr-2">Brief</span>
+          {pitch.request.brief}
+          {pitch.request.budget_usd != null && <span className="text-text"> · budget {usd(pitch.request.budget_usd)}</span>}
+        </p>
+      )}
       <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-3">
         {pitch.variants.map((v) => (
           <VariantTile
@@ -71,6 +83,17 @@ export function PitchCard({ pitch, onChange }: { pitch: PitchWithDetails; onChan
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
+          <input
+            className="input sm:w-36"
+            type="number"
+            min={0}
+            step={1}
+            inputMode="numeric"
+            placeholder="Rate (USD)"
+            aria-label="Your rate in USD"
+            value={rate}
+            onChange={(e) => setRate(e.target.value)}
+          />
           <button className="btn btn-primary" disabled={!pick || sending} onClick={send}>
             {sending ? "Sending…" : pick ? "Send this take to the brand" : "Pick your best take"}
           </button>
@@ -78,7 +101,8 @@ export function PitchCard({ pitch, onChange }: { pitch: PitchWithDetails; onChan
       )}
       {sent && (
         <div className="border-t border-line px-4 py-3 text-sm text-ok">
-          Sent to {pitch.brand.name}&apos;s inbox{pitch.message ? `: “${pitch.message}”` : ""}
+          Sent to {pitch.brand.name}&apos;s inbox{pitch.rate_usd != null ? ` at ${usd(pitch.rate_usd)}` : ""}
+          {pitch.message ? `: “${pitch.message}”` : ""}
         </div>
       )}
     </div>

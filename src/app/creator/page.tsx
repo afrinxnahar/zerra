@@ -5,7 +5,7 @@ import { BrandPicker } from "@/components/BrandPicker";
 export const metadata = { title: "Discover brands" };
 
 export default async function DiscoverPage() {
-  const brands = await db().listBrands();
+  const brands = await db().listBrands({ published: true });
   return (
     <div className="space-y-8">
       <PageHeader eyebrow="Discover" title="Pitch a brand with a spec ad">

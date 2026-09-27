@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { PitchWithDetails } from "@/lib/types";
 import { AdPlayer } from "./AdPlayer";
+import { usd } from "./Form";
 
 /** The brand side: pitches arrive as playable spec ads, not paragraphs. */
 export function Inbox({ pitches }: { pitches: PitchWithDetails[] }) {
@@ -33,10 +34,11 @@ export function Inbox({ pitches }: { pitches: PitchWithDetails[] }) {
                 <div className="grid h-11 w-11 place-items-center rounded-full bg-text text-lg font-semibold text-bg">
                   {p.creator.name.slice(0, 1)}
                 </div>
-                <div>
+                <div className="flex-1">
                   <div className="font-medium">{p.creator.name}</div>
                   <div className="text-xs text-muted">{p.creator.niche}</div>
                 </div>
+                {p.request && <span className="rounded-full bg-panel-2 px-2.5 py-1 text-xs">You requested this</span>}
               </div>
               {p.message && <p className="rounded-xl bg-panel-2 p-4 text-sm leading-relaxed">“{p.message}”</p>}
               <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line text-sm">
@@ -44,8 +46,13 @@ export function Inbox({ pitches }: { pitches: PitchWithDetails[] }) {
                 <Fact label="Format">
                   {p.creator.aspect} · {v?.duration_sec}s
                 </Fact>
+                <Fact label="Rate">{p.rate_usd != null ? usd(p.rate_usd) : "Not set"}</Fact>
+                {p.request && <Fact label="Your budget">{p.request.budget_usd != null ? usd(p.request.budget_usd) : "Open"}</Fact>}
                 <Fact label="Angle">{v?.assets.angle}</Fact>
-                <Fact label="Received">{p.sent_at ? new Date(p.sent_at).toLocaleString() : ""}</Fact>
+                {/* full width when it's the odd one out, so the grid has no hole */}
+                <Fact label="Received" wide={!p.request}>
+                  {p.sent_at ? new Date(p.sent_at).toLocaleString() : ""}
+                </Fact>
               </dl>
               <div className="flex flex-wrap gap-2">
                 <InterestedButton />
@@ -63,9 +70,9 @@ export function Inbox({ pitches }: { pitches: PitchWithDetails[] }) {
   );
 }
 
-function Fact({ label, children }: { label: string; children: React.ReactNode }) {
+function Fact({ label, wide, children }: { label: string; wide?: boolean; children: React.ReactNode }) {
   return (
-    <div className="bg-panel p-3">
+    <div className={`bg-panel p-3 ${wide ? "col-span-2" : ""}`}>
       <dt className="eyebrow !text-[10px]">{label}</dt>
       <dd className="mt-1">{children}</dd>
     </div>

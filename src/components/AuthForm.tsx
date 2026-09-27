@@ -2,34 +2,11 @@
 
 import { useActionState, useState } from "react";
 import Link from "next/link";
-import { login, oauth, onboard, signup, type AuthState } from "@/lib/actions";
-import type { Brand, Role } from "@/lib/types";
+import { login, oauth, onboard, signup } from "@/lib/actions";
+import { CATEGORIES, type Role } from "@/lib/types";
+import { Field, FormMessage, TextArea } from "./Form";
 
 const PROVIDER_LABEL: Record<string, string> = { google: "Google", github: "GitHub", azure: "Microsoft", apple: "Apple" };
-
-function Field({ label, ...props }: { label: string } & React.InputHTMLAttributes<HTMLInputElement>) {
-  return (
-    <label className="block space-y-1.5">
-      <span className="eyebrow">{label}</span>
-      <input className="input" {...props} />
-    </label>
-  );
-}
-
-function FormMessage({ state }: { state: AuthState }) {
-  if (state?.notice) {
-    return (
-      <p role="status" className="rounded-xl border border-ok/30 bg-ok/10 px-4 py-2.5 text-sm text-ok">
-        {state.notice}
-      </p>
-    );
-  }
-  return state?.error ? (
-    <p role="alert" className="rounded-xl border border-bad/30 bg-bad/10 px-4 py-2.5 text-sm text-bad">
-      {state.error}
-    </p>
-  ) : null;
-}
 
 /** "Continue with Google" etc. Its own form, since forms can't nest. */
 function SsoButtons({ providers }: { providers: string[] }) {
@@ -51,7 +28,7 @@ function SsoButtons({ providers }: { providers: string[] }) {
 }
 
 /** Creator or brand, plus the one field each needs. Shared by signup and onboarding. */
-function RoleFields({ brands, initialRole, fields }: { brands: Brand[]; initialRole: Role; fields?: Record<string, string> }) {
+function RoleFields({ initialRole, fields }: { initialRole: Role; fields?: Record<string, string> }) {
   const [role, setRole] = useState<Role>(initialRole);
   return (
     <>
@@ -74,20 +51,34 @@ function RoleFields({ brands, initialRole, fields }: { brands: Brand[]; initialR
       {role === "creator" ? (
         <Field label="Channel name" name="name" required maxLength={80} placeholder="Afrin Builds" defaultValue={fields?.name} />
       ) : (
-        <label className="block space-y-1.5">
-          <span className="eyebrow">Your brand</span>
-          {/* keyed: a select only takes defaultValue on mount, and React resets the form after each action */}
-          <select key={fields?.brand_id} className="input" name="brand_id" required defaultValue={fields?.brand_id || ""}>
-            <option value="" disabled>
-              Select your brand
-            </option>
-            {brands.map((b) => (
-              <option key={b.id} value={b.id}>
-                {b.name}
+        <>
+          <Field label="Brand name" name="brand_name" required maxLength={80} placeholder="Glow Co" defaultValue={fields?.brand_name} />
+          <label className="block space-y-1.5">
+            <span className="eyebrow">Category</span>
+            {/* keyed: a select only takes defaultValue on mount, and React resets the form after each action */}
+            <select key={fields?.category} name="category" required className="input capitalize" defaultValue={fields?.category || ""}>
+              <option value="" disabled>
+                Pick one
               </option>
-            ))}
-          </select>
-        </label>
+              {CATEGORIES.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </select>
+          </label>
+          <Field label="Website" name="website" type="url" placeholder="https://" defaultValue={fields?.website} />
+          <TextArea
+            label="What you make"
+            name="description"
+            required
+            maxLength={280}
+            rows={2}
+            placeholder="Clean skincare for people who hate routines."
+            defaultValue={fields?.description}
+            hint="Your product photo, facts and socials come next, in brand settings."
+          />
+        </>
       )}
     </>
   );
@@ -116,14 +107,14 @@ export function LoginForm({ providers, error }: { providers: string[]; error?: s
   );
 }
 
-export function SignupForm({ brands, initialRole, providers }: { brands: Brand[]; initialRole: Role; providers: string[] }) {
+export function SignupForm({ initialRole, providers }: { initialRole: Role; providers: string[] }) {
   const [state, action, pending] = useActionState(signup, undefined);
   const f = state?.fields;
   return (
     <>
       <SsoButtons providers={providers} />
       <form action={action} className="space-y-4">
-        <RoleFields brands={brands} initialRole={initialRole} fields={f} />
+        <RoleFields initialRole={initialRole} fields={f} />
         <Field label="Email" name="email" type="email" autoComplete="email" required defaultValue={f?.email} />
         <Field label="Password" name="password" type="password" autoComplete="new-password" required minLength={8} placeholder="8+ characters" />
         <FormMessage state={state} />
@@ -141,11 +132,11 @@ export function SignupForm({ brands, initialRole, providers }: { brands: Brand[]
   );
 }
 
-export function OnboardingForm({ brands }: { brands: Brand[] }) {
+export function OnboardingForm() {
   const [state, action, pending] = useActionState(onboard, undefined);
   return (
     <form action={action} className="space-y-4">
-      <RoleFields brands={brands} initialRole="creator" fields={state?.fields} />
+      <RoleFields initialRole="creator" fields={state?.fields} />
       <FormMessage state={state} />
       <button className="btn btn-primary w-full" disabled={pending}>
         {pending ? "Saving…" : "Continue"}

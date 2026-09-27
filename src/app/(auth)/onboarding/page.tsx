@@ -1,6 +1,5 @@
 import { redirect } from "next/navigation";
 import { getAuthUser } from "@/lib/auth";
-import { db } from "@/lib/store";
 import { OnboardingForm } from "@/components/AuthForm";
 
 export const metadata = { title: "Finish signing up" };
@@ -9,7 +8,6 @@ export const metadata = { title: "Finish signing up" };
 export default async function OnboardingPage() {
   const auth = await getAuthUser();
   if (!auth) redirect("/login");
-  const brands = await db().listBrands();
   return (
     <>
       <div className="mb-8 text-center">
@@ -18,7 +16,7 @@ export default async function OnboardingPage() {
         <p className="mt-3 text-sm text-muted">Signed in as {auth.email}</p>
       </div>
       <div className="card p-6 sm:p-8">
-        <OnboardingForm brands={brands} />
+        <OnboardingForm />
       </div>
     </>
   );

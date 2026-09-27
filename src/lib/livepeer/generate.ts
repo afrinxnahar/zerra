@@ -1,5 +1,6 @@
 import { AsyncLocalStorage } from "node:async_hooks";
 import { env } from "../env";
+import { trimPng } from "../png";
 import { runCapability, uploadBytes } from "./client";
 
 /**
@@ -204,6 +205,23 @@ export async function mux(video: string, audio: string): Promise<string> {
   }
   const r = await run("ffmpeg-mux", { source_url: video, inputs: { audio_url: audio, shortest: true }, timeout: 60 });
   return needUrl(r, "ffmpeg-mux");
+}
+
+/**
+ * A brand's product photo -> hosted, background-free, tightly cropped cutout for compositing.
+ * Mock mode skips the paid background removal and just trims/hosts what was uploaded.
+ */
+export async function productCutout(photo: Buffer, mime: string) {
+  const photo_url = await uploadBytes(photo, mime, `product.${mime.split("/")[1] || "img"}`);
+  let png = mime === "image/png" ? photo : null;
+  if (!isMock()) {
+    const r = await run("ideogram-bg-remove", { source_url: photo_url, timeout: 120 });
+    png = Buffer.from(await (await fetch(needUrl(r, "ideogram-bg-remove"))).arrayBuffer());
+  }
+  if (!png) return { photo_url, cutout_url: photo_url, aspect: 0.7 }; // mock + jpeg: nothing to trim
+  const trimmed = trimPng(png);
+  const cutout_url = await uploadBytes(trimmed.png, "image/png", "cutout.png");
+  return { photo_url, cutout_url, aspect: trimmed.aspect };
 }
 
 /** Make sure an asset is reachable by the Livepeer network (local paths get uploaded). */

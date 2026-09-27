@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Creator } from "@/lib/types";
+import { CATEGORIES, type Creator } from "@/lib/types";
 import { api } from "./api";
 
 const VOICES = ["Tessa (en)", "Celeste (en)", "Pippa (en)", "Evelyn (en)", "Liam (en)", "Callum (en)", "Hank (en)"];
@@ -13,6 +13,12 @@ export function CreatorPanel({ creator }: { creator: Creator }) {
   const set = (k: keyof Creator) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setSaved(false);
     setC({ ...c, [k]: e.target.value });
+  };
+
+  const cats = c.categories ?? []; // older profiles predate categories
+  const toggle = (cat: string) => {
+    setSaved(false);
+    setC({ ...c, categories: cats.includes(cat) ? cats.filter((x) => x !== cat) : [...cats, cat] });
   };
 
   async function save() {
@@ -52,6 +58,22 @@ export function CreatorPanel({ creator }: { creator: Creator }) {
         Channel link (latest thumbnail opens the ad)
         <input className="input" value={c.channel_url || ""} onChange={set("channel_url")} placeholder="https://youtube.com/@you" />
       </label>
+      <fieldset className="space-y-1.5">
+        <legend className="text-xs text-muted">Categories you cover (brands in these categories find you)</legend>
+        <div className="flex flex-wrap gap-2 pt-1">
+          {CATEGORIES.map((cat) => (
+            <label
+              key={cat}
+              className={`cursor-pointer rounded-full border px-3 py-1.5 text-xs capitalize transition has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-white ${
+                cats.includes(cat) ? "border-text bg-text text-bg" : "border-line text-muted hover:text-text"
+              }`}
+            >
+              <input type="checkbox" className="sr-only" checked={cats.includes(cat)} onChange={() => toggle(cat)} />
+              {cat}
+            </label>
+          ))}
+        </div>
+      </fieldset>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block space-y-1.5 text-xs text-muted">
           Voice

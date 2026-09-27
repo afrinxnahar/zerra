@@ -78,7 +78,7 @@ export async function onboard(_: AuthState, form: FormData): Promise<AuthState> 
   const parsed = ProfileInput.safeParse(fields);
   if (!parsed.success) return { error: parsed.error.issues[0].message, fields };
   const user = await createProfile(auth.id, auth.email, parsed.data);
-  if (!user) return { error: "Unknown brand.", fields };
+  if (!user) return { error: "Couldn't create your profile, try again.", fields };
   redirect(homeFor(user));
 }
 

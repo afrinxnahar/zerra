@@ -20,11 +20,11 @@ export const api = {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ brand_id }),
     }).then((r) => j<PitchWithDetails>(r)),
-  send: (pitchId: string, variant_id: string, message: string) =>
+  send: (pitchId: string, variant_id: string, message: string, rate_usd: number | null) =>
     fetch(`/api/pitches/${pitchId}/send`, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ variant_id, message }),
+      body: JSON.stringify({ variant_id, message, rate_usd }),
     }).then((r) => j<PitchWithDetails>(r)),
   retry: (variantId: string) => fetch(`/api/variants/${variantId}/retry`, { method: "POST" }).then((r) => j(r)),
   status: () =>

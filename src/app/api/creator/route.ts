@@ -3,6 +3,7 @@ import { z } from "zod";
 import { db } from "@/lib/store";
 import { getUser, unauthorized } from "@/lib/auth";
 import { VOICES } from "@/lib/pipeline/templates";
+import { CATEGORIES } from "@/lib/types";
 
 const Body = z.object({
   name: z.string().min(1).max(80),
@@ -11,6 +12,7 @@ const Body = z.object({
   channel_url: z.string().max(300).nullable().optional(),
   voice: z.enum(VOICES),
   aspect: z.enum(["9:16", "16:9"]),
+  categories: z.array(z.enum(CATEGORIES)).max(CATEGORIES.length).default([]),
 });
 
 /** Save the signed-in creator's profile. */
