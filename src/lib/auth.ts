@@ -30,6 +30,9 @@ export async function authClient() {
 
 /** The verified Supabase Auth identity for this request, or null. */
 export const getAuthUser = cache(async (): Promise<{ id: string; email: string } | null> => {
+  // read cookies before any early return: it's what makes auth-dependent pages dynamic.
+  // Otherwise a build without Supabase env vars prerenders them as signed-out static pages.
+  await cookies();
   if (!hasSupabaseAuth()) return null;
   const { data } = await (await authClient()).auth.getClaims();
   const c = data?.claims;
