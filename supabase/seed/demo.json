@@ -1,0 +1,1075 @@
+{
+ "_about": "Demo data for `npm run seed`. video_url values starting with videos/ are uploaded from supabase/seed/videos to Storage. Accounts get DEMO_PASSWORD.",
+ "accounts": [
+  {
+   "email": "demo-creator@example.com",
+   "role": "creator",
+   "creator_id": "6ae7984e-dab8-42cc-9649-14462f1cfce6"
+  },
+  {
+   "email": "olipop@example.com",
+   "role": "brand",
+   "brand_id": "olipop"
+  },
+  {
+   "email": "liquid-death@example.com",
+   "role": "brand",
+   "brand_id": "liquid-death"
+  },
+  {
+   "email": "stanley@example.com",
+   "role": "brand",
+   "brand_id": "stanley"
+  },
+  {
+   "email": "allbirds@example.com",
+   "role": "brand",
+   "brand_id": "allbirds"
+  },
+  {
+   "email": "keychron@example.com",
+   "role": "brand",
+   "brand_id": "keychron"
+  },
+  {
+   "email": "glossier@example.com",
+   "role": "brand",
+   "brand_id": "glossier"
+  },
+  {
+   "email": "magic-spoon@example.com",
+   "role": "brand",
+   "brand_id": "magic-spoon"
+  },
+  {
+   "email": "graza@example.com",
+   "role": "brand",
+   "brand_id": "graza"
+  },
+  {
+   "email": "ghost@example.com",
+   "role": "brand",
+   "brand_id": "ghost"
+  },
+  {
+   "email": "our-place@example.com",
+   "role": "brand",
+   "brand_id": "our-place"
+  },
+  {
+   "email": "loop@example.com",
+   "role": "brand",
+   "brand_id": "loop"
+  }
+ ],
+ "creators": [
+  {
+   "id": "6ae7984e-dab8-42cc-9649-14462f1cfce6",
+   "niche": "tech and productivity YouTuber",
+   "style_notes": "casual, talks straight to the viewer, a little funny, late night coding sessions, desk setup vibes",
+   "channel_url": null,
+   "voice": "Tessa (en)",
+   "aspect": "9:16",
+   "created_at": "2026-09-24T19:03:59.940Z",
+   "name": "Afrin Builds"
+  }
+ ],
+ "pitches": [
+  {
+   "id": "c915200a-6d99-4e26-a595-5cedc84b4c86",
+   "creator_id": "6ae7984e-dab8-42cc-9649-14462f1cfce6",
+   "brand_id": "olipop",
+   "status": "sent",
+   "selected_variant_id": "30c4772d-c9ad-4102-8501-6ef35eaedf53",
+   "message": "Hey OLIPOP team! I made this spec ad for my channel. Would love to run it for real.",
+   "created_at": "2026-09-24T19:15:11.936Z",
+   "sent_at": "2026-09-24T19:36:33.734Z"
+  },
+  {
+   "id": "03a60812-0fb5-4c03-97f2-89b1397ad4ec",
+   "creator_id": "6ae7984e-dab8-42cc-9649-14462f1cfce6",
+   "brand_id": "keychron",
+   "status": "ready",
+   "selected_variant_id": null,
+   "message": null,
+   "created_at": "2026-09-24T19:15:11.956Z",
+   "sent_at": null
+  },
+  {
+   "id": "d7ec1e8f-4c15-4123-bb54-fbd3534d9e57",
+   "creator_id": "6ae7984e-dab8-42cc-9649-14462f1cfce6",
+   "brand_id": "loop",
+   "status": "ready",
+   "selected_variant_id": null,
+   "message": null,
+   "created_at": "2026-09-24T19:15:11.977Z",
+   "sent_at": null
+  },
+  {
+   "id": "d3c9ed3f-cb82-4367-8e19-2d4a1c510ac2",
+   "creator_id": "6ae7984e-dab8-42cc-9649-14462f1cfce6",
+   "brand_id": "liquid-death",
+   "status": "ready",
+   "selected_variant_id": null,
+   "message": null,
+   "created_at": "2026-09-27T18:05:32.224Z",
+   "sent_at": null
+  }
+ ],
+ "variants": [
+  {
+   "id": "30c4772d-c9ad-4102-8501-6ef35eaedf53",
+   "pitch_id": "c915200a-6d99-4e26-a595-5cedc84b4c86",
+   "idx": 0,
+   "angle": "relatable",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:17 script done in 5.4s ($0.000)",
+     "19:15:17 visuals started",
+     "19:15:28 visuals done in 10.8s ($0.105)",
+     "19:15:28 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:35 audio started",
+     "19:19:30 audio done in 55.0s ($0.055)",
+     "19:19:30 motion started",
+     "19:23:23 motion done in 232.0s ($0.000)",
+     "19:23:23 mux started",
+     "19:32:22 mux done in 539.5s ($0.000)"
+    ],
+    "angle": "Relatable moment",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Another late night, another line of code I'm staring at.",
+      "visual": "A dimly lit desk from a low angle, showing a mechanical keyboard and a monitor displaying code. The overall mood is focused and slightly tired, with soft backlighting from the monitor. Empty space in the lower middle for product.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMvVkNxbXlrNlF4SXY0Z1lIOW4xYzAwLmpwZw.ff55b31b59193900/VCqmyk6QxIv4gYH9n1c00.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjcvZlZfRnhNYVRpMjJXNEJySnRkc253Lndhdg.753e2edf5a06b6bc/fV_FxMaTi22W4BrJtdsnw.wav",
+      "vo_sec": 4.8,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzU4OTkzNy1hNzNlY2UzOTQ5MWI0YzhkOTExZDhjMWNmMWNiYjY0Ny5tcDQ.783d005d440f121c/1790277589937-a73ece39491b4c8d911d8c1cf1cbb647.mp4",
+      "clip_sec": 5.3
+     },
+     {
+      "slot": "product",
+      "vo": "Good thing I have OLIPOP Orange Cream.",
+      "visual": "A slightly wider shot of the same desk setup. A comfortable office chair is visible, and perhaps a small plant or a charging phone on the side. Lighting remains soft and warm. Empty space in the lower middle for product.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvOGsxa29Za09ndldUeGhoc1Fkbl91LmpwZw.915570014e431b06/8k1koYkOgvWTxhhsQdn_u.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjgva0pmQXNnNE85TzdfZkR6WHFSSkN4Lndhdg.8d75efacfbe64d5a/kJfAsg4O9O7_fDzXqRJCx.wav",
+      "vo_sec": 3.04,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzY0MDQ0NS01YjQ4YjY4YTlhZmQ0YTY2YWI4YjYxYTc1NmMxMTliZi5tcDQ.50b727153798fb91/1790277640445-5b48b68a9afd4a66ab8b61a756c119bf.mp4",
+      "clip_sec": 3.54
+     },
+     {
+      "slot": "benefit",
+      "vo": "It tastes like that orange cream treat from an ice cream truck.",
+      "visual": "A close-up on a hand (not the creator's face) reaching for something off-screen, perhaps a mouse or a pen, on the same desk. The monitor's glow casts a subtle light on the hand. Empty space in the lower middle for product.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvMDFvMGhGZ2VwSjJJWnFiWUdsMTBwLmpwZw.2c418e332dae2f59/01o0hFgepJ2IZqbYGl10p.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjcva0pTMkhJZXVzeThjYU9tTHpHTVk4Lndhdg.cddfc7353a28e833/kJS2HIeusy8caOmLzGMY8.wav",
+      "vo_sec": 3.94,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzcxODI2OC02ZTRhYmE5ZDkwMmQ0NWI1ODQzZjYxYjg5ODJlMmRlYS5tcDQ.63ac13cb10226d44/1790277718268-6e4aba9d902d45b5843f61b8982e2dea.mp4",
+      "clip_sec": 4.44
+     },
+     {
+      "slot": "cta",
+      "vo": "Grab some OLIPOP and try it for yourself, link below.",
+      "visual": "A view over the shoulder of someone working at the desk, showing the back of their head and the screen. The overall scene is calm and productive. Empty space in the lower middle for product.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMvanV4dHhwZ0p0UnBsOGU3M0JZTXpqLmpwZw.08a0c5adca27aec0/juxtxpgJtRpl8e73BYMzj.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjgvMkNQWlM4eTJNQS1CTS1PUjNaQXhsLndhdg.54fbdccfac25b571/2CPZS8y2MA-BM-OR3ZAxl.wav",
+      "vo_sec": 4.58,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzgwMjIzMS1mYTc0ZDU1NjgyMmI0ODc0OTg2MGIyYjYxODU3NWZjYS5tcDQ.de5bd17a120f516d/1790277802231-fa74d556822b48749860b2b618575fca.mp4",
+      "clip_sec": 5.08
+     }
+    ],
+    "music_prompt": "upbeat, lo-fi hip hop with a chill, productive vibe",
+    "cost_usd": 0.1602,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmMvZG1XdjkyMTF1M0pLc1BLQlIzMWFMX3RtcG82bGxjc2x0Lm00YQ.9c6be1ad43885282/dmWv9211u3JKsPKBR31aL_tmpo6llcslt.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk0NzYwMC0xNDFiOTM0NmZjMzk0MDZlODk0ZDM5MzlhZGQ1ODQwMC5tcDQ.4faa13fc119d5c88/1790277947600-141b9346fc39406e894d3939add58400.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODAwMzkxMi1lNTYxM2NmMmVjYTc0MmZjYTc2ZTVhYTc2OWZhNzc1YS5tcDQ.ce53d64fc2f664fd/1790278003912-e5613cf2eca742fca76e5aa769fa775a.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODE2NDk4Ny0yYzE4YzAxMTljMTc0NDBhOGE2MWZmMjljYjAwMzc4NC5tcDQ.d8e4317b0c36b414/1790278164987-2c18c0119c17440a8a61ff29cb003784.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODI2Nzk2OS1lZWNmZGNkNjFiZmU0ZDEyOTU1NDA4Y2Q3N2M3Y2E0Yi5hYWM.331f2131149d03d0/1790278267969-eecfdcd61bfe4d12955408cd77c7ca4b.aac"
+   },
+   "video_url": "videos/30c4772d-c9ad-4102-8501-6ef35eaedf53.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvOGsxa29Za09ndldUeGhoc1Fkbl91LmpwZw.915570014e431b06/8k1koYkOgvWTxhhsQdn_u.jpg",
+   "duration_sec": 18.4,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.936Z",
+   "updated_at": "2026-09-24T19:32:22.534Z"
+  },
+  {
+   "id": "79c345df-c03f-4655-9645-45a338a740cf",
+   "pitch_id": "c915200a-6d99-4e26-a595-5cedc84b4c86",
+   "idx": 1,
+   "angle": "value",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:17 script done in 5.9s ($0.000)",
+     "19:15:17 visuals started",
+     "19:15:26 visuals done in 8.5s ($0.105)",
+     "19:15:26 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:37 audio started",
+     "19:19:30 audio done in 53.7s ($0.066)",
+     "19:19:30 motion started",
+     "19:23:34 motion done in 244.0s ($0.000)",
+     "19:23:34 mux started",
+     "19:32:31 mux done in 536.5s ($0.000)"
+    ],
+    "angle": "Straight value",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Another late night coding session. You know the drill, sometimes you just need a little something.",
+      "visual": "A softly lit desk setup at night. A mechanical keyboard, a large monitor displaying code, and a clean, minimalist mouse pad are visible. The mood is calm and focused. Framed from a slightly elevated angle looking down at the desk, with clear empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMvRkhqeWF1a2NmS2psOGxwMVNqYnBVLmpwZw.efaf63014dca1bac/FHjyaukcfKjl8lp1SjbpU.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjgvRTF0WVZkWTY4OHFIOVotbDJiUk1ELndhdg.6ee1e9ab970fb83a/E1tYVdY688qH9Z-l2bRMD.wav",
+      "vo_sec": 6.7,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzYxMzI0OC01ZjYxODc3MzU4MGM0NzdmYjA5YzcxOTU2N2JlOGVkNi5tcDQ.1fbec12589bbc6c5/1790277613248-5f618773580c477fb09c719567be8ed6.mp4",
+      "clip_sec": 7.2
+     },
+     {
+      "slot": "product",
+      "vo": "Thatâ€™s why I keep OLIPOP Orange Cream on hand.",
+      "visual": "The same desk setup, now with a warm glow emanating from the monitor. A wireless mouse rests beside the keyboard. The focus is still on the desk items, with the same empty space for the product.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvNHF4NmFTelZ0X3VMbHQtNzdJYW5MLmpwZw.303fa547e7636a4d/4qx6aSzVt_uLlt-77IanL.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjgvR1FNekdGS094cGJGVzAwMDdYallDLndhdg.120922008a8436bd/GQMzGFKOxpbFW0007XjYC.wav",
+      "vo_sec": 4.08,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzY0MDQ0NC1jZGRlY2FlOTcxODg0MWE5YmVhZjk4NjI4ZTEzOTZiMS5tcDQ.ce7d0da0f629829e/1790277640444-cddecae9718841a9beaf98628e1396b1.mp4",
+      "clip_sec": 4.58
+     },
+     {
+      "slot": "benefit",
+      "vo": "Seriously, it tastes exactly like the orange cream treat from an ice cream truck.",
+      "visual": "The desk scene, but now a hand (creator's, not showing face) is reaching for a small, unidentifiable object just out of frame, suggesting a moment of pause. The lighting remains consistent, maintaining the late-night, focused ambiance. Empty space remains prominent.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvdjlpRlFNSkxtQ1VxWXgzdURDZWt1LmpwZw.4599244d1cf1ed17/v9iFQMJLmCUqYx3uDCeku.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjgvdm95RDIycjhqdWhxZjVZaHlpaGlLLndhdg.bd4c058a272e2361/voyD22r8juhqf5YhyihiK.wav",
+      "vo_sec": 5.04,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzc3MzI4OS0zOWNiNjg3Mjk0MzU0ZGNmODBhOGZkZDAyZDVhN2E4MS5tcDQ.a10b69888334a6d9/1790277773289-39cb687294354dcf80a8fdd02d5a7a81.mp4",
+      "clip_sec": 5.54
+     },
+     {
+      "slot": "cta",
+      "vo": "If you want something good, try OLIPOP. Link is below.",
+      "visual": "The full desk setup, perhaps with a soft, out-of-focus background of shelves filled with tech gadgets. The lighting is still warm and inviting. The framing maintains the clear lower-middle space for product placement, emphasizing the overall productivity vibe.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMvb0t1bDZjSVdZRHJvTS1XbVRPdC15LmpwZw.d9b15e20c8f212eb/oKul6cIWYDroM-WmTOt-y.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjgvVVVJNmdmZVF0REZwZ2ROeEtOUGV3Lndhdg.acb8e5e771d44c8e/UUI6gfeQtDFpgdNxKNPew.wav",
+      "vo_sec": 4.68,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzgxMzg5MS05YWUyZGM2MTY1MTI0ZTkzOWI5NGUzMDgzNzAzYzlmNS5tcDQ.4af30ffa191d0601/1790277813891-9ae2dc6165124e939b94e3083703c9f5.mp4",
+      "clip_sec": 5.18
+     }
+    ],
+    "music_prompt": "chill, lo-fi electronic background music",
+    "cost_usd": 0.1714,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmMvcXg4dGlUVkxaNVA3bmhhcUQyT2VTX3RtcGt0MzhsanQ0Lm00YQ.da2f88c63bafb1af/qx8tiTVLZ5P7nhaqD2OeS_tmpkt38ljt4.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk1MTI3Ny04Y2QxMWI1NzUzMzY0NDIwYTcyMjk5ZGZkOWVjNzBjYy5tcDQ.8fb8c5fda7301fca/1790277951277-8cd11b5753364420a72299dfd9ec70cc.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODA0NTM5Ny1hNWQwNDk1NTRmY2I0MzA2YWRmN2M0MDQ0MTdmNDM3MS5tcDQ.5ff6862a246b8386/1790278045397-a5d049554fcb4306adf7c404417f4371.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODIzMTU5MS1lY2I2OTE2ZGU0NDk0MWM0YmMyZWFjZGUzZmRkMDllZC5tcDQ.97e87f43d939e095/1790278231591-ecb6916de44941c4bc2eacde3fdd09ed.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODMxMTk1Ny02YzBiODg4NjI1ZTI0MTNkOWFhZWFhZmYwNjYzN2M1MS5hYWM.db4f8aee3cc152b1/1790278311957-6c0b888625e2413d9aaeaaff06637c51.aac"
+   },
+   "video_url": "videos/79c345df-c03f-4655-9645-45a338a740cf.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvNHF4NmFTelZ0X3VMbHQtNzdJYW5MLmpwZw.303fa547e7636a4d/4qx6aSzVt_uLlt-77IanL.jpg",
+   "duration_sec": 22.5,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.936Z",
+   "updated_at": "2026-09-24T19:32:31.267Z"
+  },
+  {
+   "id": "4738243b-ff31-440b-a4a2-d111d0a628ec",
+   "pitch_id": "c915200a-6d99-4e26-a595-5cedc84b4c86",
+   "idx": 2,
+   "angle": "playful",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:18 script done in 6.8s ($0.000)",
+     "19:15:18 visuals started",
+     "19:15:28 visuals done in 10.1s ($0.105)",
+     "19:15:28 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:38 audio started",
+     "19:19:33 audio done in 55.4s ($0.074)",
+     "19:19:33 motion started",
+     "19:23:46 motion done in 253.1s ($0.000)",
+     "19:23:46 mux started",
+     "19:31:58 mux done in 492.1s ($0.000)"
+    ],
+    "angle": "Playful",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Another late-night coding session, another existential crisis about my to-do list.",
+      "visual": "A dimly lit desk, focused on a mechanical keyboard and a glowing monitor displaying lines of code. The desk is neat but lived-in, with a few tech gadgets subtly placed. Low angle, looking up slightly at the monitor. Soft, warm ambient light from the screen.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvUEFLbUltZ2RhMUxsekctSE4yTnZMLmpwZw.93f11ef8adb580e4/PAKmImgda1LlzG-HN2NvL.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjgvSEtVdm5VRUFOYlZmUFB0dDdlTzdWLndhdg.4620a623d4efe967/HKUvnUEANbVfPPtt7eO7V.wav",
+      "vo_sec": 6.64,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzYzMjU4OS03YzI5M2UwZWZkNGQ0ZTcxOWQ5ZDlmMDE5M2Q0ZmMzOS5tcDQ.8d808a7b0e941913/1790277632589-7c293e0efd4d4e719d9d9f0193d4fc39.mp4",
+      "clip_sec": 7.14
+     },
+     {
+      "slot": "product",
+      "vo": "Good thing Iâ€™ve got my secret weapon: OLIPOP Orange Cream.",
+      "visual": "The same desk setup as before, but with a slightly wider shot revealing a comfy, ergonomic chair. The monitor screen is less prominent, and the keyboard is still central. Lighting remains soft and warm. Clear space in the lower middle of the frame.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvYy1qUzd1U2Y2YjNVdHhGcDRuRURGLmpwZw.27596be875c28a1d/c-jS7uSf6b3UtxFp4nEDF.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjgvSGxEbjlnSU51OVRnZzVYeXRjZ1BqLndhdg.56cfcad596f2f4d2/HlDn9gINu9Tgg5XytcgPj.wav",
+      "vo_sec": 5.84,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzY0OTg2Ni02OWFkOTg5OTI4MjQ0NzZkODMyNDQxOTM3NWRkZjQ1Mi5tcDQ.69b6b865f5f8bd72/1790277649866-69ad98992824476d8324419375ddf452.mp4",
+      "clip_sec": 6.34
+     },
+     {
+      "slot": "benefit",
+      "vo": "Seriously, it tastes exactly like the orange cream treat from an ice cream truck.",
+      "visual": "A close-up on a hand (not the creator's face) reaching for something just out of frame, a relaxed posture. The background is still the desk environment, slightly blurred. The hand has a subtle glint from the screen light. Clear space in the lower middle of the frame.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvRHgxbk5iNzZjdnN1bjA5aDlZNktFLmpwZw.4dfe0af41c8c3052/Dx1nNb76cvsun09h9Y6KE.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjkveDA4YWJKMXdPNFhMTi11Rkt2MFphLndhdg.974ee3f7ec457043/x08abJ1wO4XLN-uFKv0Za.wav",
+      "vo_sec": 6.1,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzc5MDg4Mi1hYTg3YmZlYWY1NTY0NGUzOWYxNmVjMDQ0OWRjYmRhNS5tcDQ.4472ffa2ce791ead/1790277790882-aa87bfeaf55644e39f16ec0449dcbda5.mp4",
+      "clip_sec": 6.6
+     },
+     {
+      "slot": "cta",
+      "vo": "Go try OLIPOP for yourself. Link in the description.",
+      "visual": "A slightly wider shot of the desk and chair from a different angle, showcasing a well-organized tech setup with a few subtle personal touches. The monitor is visible but not the focal point. Soft, warm lighting, creating a comfortable, productive atmosphere. Clear space in the lower middle of the frame.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvT2NjSUlxR282dVJYUE5XTjFxRzVaLmpwZw.138203819a65bda7/OccIIqGo6uRXPNWN1qG5Z.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjkvUldZOTFmXzRQRkxKVmdrTzhYVkFKLndhdg.73d56ed6cecd8308/RWY91f_4PFLJVgkO8XVAJ.wav",
+      "vo_sec": 4.7,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzgyNTcwMi1iMmJmYTY3Y2QwYzY0NTBhODA1ZjQ1OTdkODEwMmE4OC5tcDQ.97e59a6a64810203/1790277825702-b2bfa67cd0c6450a805f4597d8102a88.mp4",
+      "clip_sec": 5.2
+     }
+    ],
+    "music_prompt": "Upbeat, light lo-fi hip hop instrumental",
+    "cost_usd": 0.1792,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmQvVVoyTDVaYVlxbG5TeGNGbWhjb0lZX3RtcHdhYzdlc2dzLm00YQ.6eb82f21dcb36bfa/UZ2L5ZaYqlnSxcFmhcoIY_tmpwac7esgs.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk1MDEwOC05MTA2NWE4ZWI3Njg0YzZmYWQ2Y2FiZGE4NGVlMThmMi5tcDQ.a9c9b6c60061111c/1790277950108-91065a8eb7684c6fad6cabda84ee18f2.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk4NTQzOC00ZjdlNzVlYzEzOTk0ZGQyOTYzN2VhMmZlOWVjNDhjMS5tcDQ.658e61cb7da378b2/1790277985438-4f7e75ec13994dd29637ea2fe9ec48c1.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODE0NzQ1NS0zNGI1ZDgwZDU2ZTU0Y2QxOGQ5NGZmZDdjN2JjZjhjOS5tcDQ.eb153e139a581586/1790278147455-34b5d80d56e54cd18d94ffd7c7bcf8c9.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODI0NTEyMy1mMGYxMTQ3NjQyMTE0NDFkYjA1ZDhiNzNhYmUwMmFkYy5hYWM.db2deefbfae0c2f3/1790278245123-f0f114764211441db05d8b73abe02adc.aac"
+   },
+   "video_url": "videos/4738243b-ff31-440b-a4a2-d111d0a628ec.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvYy1qUzd1U2Y2YjNVdHhGcDRuRURGLmpwZw.27596be875c28a1d/c-jS7uSf6b3UtxFp4nEDF.jpg",
+   "duration_sec": 25.3,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.936Z",
+   "updated_at": "2026-09-24T19:31:58.695Z"
+  },
+  {
+   "id": "b24b5b84-0ce6-4532-bdc8-1ae6144619eb",
+   "pitch_id": "03a60812-0fb5-4c03-97f2-89b1397ad4ec",
+   "idx": 0,
+   "angle": "relatable",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:17 script done in 5.3s ($0.000)",
+     "19:15:17 visuals started",
+     "19:15:25 visuals done in 8.7s ($0.105)",
+     "19:15:25 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:39 audio started",
+     "19:19:43 audio done in 64.8s ($0.063)",
+     "19:19:43 motion started",
+     "19:24:13 motion done in 269.1s ($0.000)",
+     "19:24:13 mux started",
+     "19:32:25 mux done in 492.3s ($0.000)"
+    ],
+    "angle": "Relatable moment",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Another late night, another typo sending my code into the void.",
+      "visual": "A dimly lit desk from a low, wide angle. Empty mug and scattered papers are visible. Soft, warm glow from a monitor off-screen. Mood is contemplative, slightly frustrated. Empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvYkg5eUJxU0ZmTkxyOHFKOEsxYVR2LmpwZw.a6cbbfffc8a0e422/bH9yBqSFfNLr8qJ8K1aTv.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjkvcnlnXy12YXhEcDNEZS12WVkwVGtwLndhdg.7aedfb94af7c63c4/ryg_-vaxDp3De-vYY0Tkp.wav",
+      "vo_sec": 4.98,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzY4NzM0NC0zZjE2ZDY1ZWVjMjc0NGZmYWQ1NTM5OGJiYzY1OGI1Yi5tcDQ.4bc34d22bc569d73/1790277687344-3f16d65eec2744ffad55398bbc658b5b.mp4",
+      "clip_sec": 5.48
+     },
+     {
+      "slot": "product",
+      "vo": "But then I got the Keychron Q1 HE keyboard.",
+      "visual": "The same desk, but now with a clear glass of water and a tidier arrangement of pens. The monitor's glow is a bit brighter, casting a soft, blue-ish light. Mood is hopeful, ready for action. Empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvc2lROXRSTVE2WFIzakFmTlg4Y3JHLmpwZw.7e458d9a5e6857ca/siQ9tRMQ6XR3jAfNX8crG.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjkva1FKUDJDRFVRTHRhTnN0bk93NHBLLndhdg.fff5da58e710591e/kQJP2CDUQLtaNstnOw4pK.wav",
+      "vo_sec": 4.08,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzY2MDc4MC1lZWE3ZTkxMTBkNDU0NzRkYTFmNDgyNDY5ZDU4N2Y1MS5tcDQ.6bba767c93747991/1790277660780-eea7e9110d45474da1f482469d587f51.mp4",
+      "clip_sec": 4.58
+     },
+     {
+      "slot": "benefit",
+      "vo": "Its magnetic switches let me adjust the actuation point, so I'm precise every time.",
+      "visual": "A close-up shot of the desk surface, focusing on a patch of light from an unseen window. A small, neatly stacked pile of books is in the background. Mood is focused, clean. Empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMvUlNSdC1UYVJtdlp2a0lvM19MR2d1LmpwZw.cdf5c78899ff0671/RSRt-TaRmvZvkIo3_LGgu.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjkvcDVTaG0wSEFiTHV2aXFlcHNtWWdiLndhdg.23c158e354cb731c/p5Shm0HAbLuviqepsmYgb.wav",
+      "vo_sec": 5.9,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzg1MTU1Mi03OWI2ZTJhMGJhYzU0MGVhOWExMDA0OTVhNTVlMWFjZi5tcDQ.03a877a2c13c2a78/1790277851552-79b6e2a0bac540ea9a100495a55e1acf.mp4",
+      "clip_sec": 6.4
+     },
+     {
+      "slot": "cta",
+      "vo": "Level up your typing like I did. Try Keychron, link below.",
+      "visual": "A slightly wider shot of the desk, still dimly lit but with a hint of warm light from a nearby desk lamp. A comfortable, open notebook lies near the back. Mood is accomplished, relaxed after work. Empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMvNU4zWUtUdHNqdWZSc1UyWkxfcjQ4LmpwZw.6e0ebb6b5dac65bc/5N3YKTtsjufRsU2ZL_r48.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjkvaFVCTW9XSWNVUnNmT0tmc0Q5QmVFLndhdg.13619dd6ab388b9c/hUBMoWIcURsfOKfsD9BeE.wav",
+      "vo_sec": 4.74,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzg1MTU1My04Yzg0YzE0YjdhMjc0NWE4YTI1ZmQyOTUwYjk4NTBhYi5tcDQ.a53bfa5c01b3a750/1790277851553-8c84c14b7a2745a8a25fd2950b9850ab.mp4",
+      "clip_sec": 5.24
+     }
+    ],
+    "music_prompt": "Chill, lofi hip-hop beat with a subtle synth melody",
+    "cost_usd": 0.1685,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmUvYVlFeGlVYUwxV01vanRIYU5PSlRoX3RtcGNmNGFpbHZlLm00YQ.a7fd68274bb66d75/aYExiUaL1WMojtHaNOJTh_tmpcf4ailve.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk1MjQyMS01ZTdhYmJmYjQ4NjA0ZTc1ODI2YTUwZDZkMzE0MWEwYS5tcDQ.4d7adf09228fc4e6/1790277952421-5e7abbfb48604e75826a50d6d3141a0a.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODA0NTM5OC0wNzNmNDcxYTFiZGY0MzhkYTY4NmJmOTY1MDFjZWUyMS5tcDQ.26cf0c1ef94779ab/1790278045398-073f471a1bdf438da686bf96501cee21.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODE4MTMwOC00ZjhhNmNmMzgxMjM0OGFiYjFmZjM3YTI4ZjkyMzQ2Yy5tcDQ.2d0e53fff8fa1cd1/1790278181308-4f8a6cf3812348abb1ff37a28f92346c.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODI5MDM3Ny0zMDk0Y2NhN2NhYTI0NmQ1YjA3YjE0NjI1YjM3YjhjOC5hYWM.2c2886a95d39ca1a/1790278290377-3094cca7caa246d5b07b14625b37b8c8.aac"
+   },
+   "video_url": "videos/b24b5b84-0ce6-4532-bdc8-1ae6144619eb.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvc2lROXRSTVE2WFIzakFmTlg4Y3JHLmpwZw.7e458d9a5e6857ca/siQ9tRMQ6XR3jAfNX8crG.jpg",
+   "duration_sec": 21.7,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.956Z",
+   "updated_at": "2026-09-24T19:32:25.269Z"
+  },
+  {
+   "id": "b5cb482c-8e78-4e81-bec1-ddbb47b1cbc2",
+   "pitch_id": "03a60812-0fb5-4c03-97f2-89b1397ad4ec",
+   "idx": 1,
+   "angle": "value",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:17 script done in 5.4s ($0.000)",
+     "19:15:17 visuals started",
+     "19:15:27 visuals done in 9.9s ($0.105)",
+     "19:15:27 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:40 audio started",
+     "19:19:57 audio done in 77.1s ($0.055)",
+     "19:19:57 motion started",
+     "19:24:45 motion done in 288.6s ($0.000)",
+     "19:24:45 mux started",
+     "19:32:26 mux done in 461.0s ($0.000)"
+    ],
+    "angle": "Straight value",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Sometimes my late-night coding feels sluggish, you know?",
+      "visual": "A dimly lit desk with a monitor displaying lines of code. Warm, soft glow from the screen. Empty space in the lower middle. Mood is focused and contemplative, like a late night work session.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMva3QyN1BLRVdXYTZuWExmcmEtbWlWLmpwZw.450571f6c75429aa/kt27PKEWWa6nXLfra-miV.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjkveG5sdlg5VzdIMHJIZHVfd19XM2M2Lndhdg.b96c3b3f7205ccf6/xnlvX9W7H0rHdu_w_W3c6.wav",
+      "vo_sec": 4.04,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzcxMzQ4OC1lZjhjZGRjMTUyZDQ0ZDg2YmNlNzE5NGFmYmQyZGZjMy5tcDQ.5c6802c6a4ddd1af/1790277713488-ef8cddc152d44d86bce7194afbd2dfc3.mp4",
+      "clip_sec": 4.54
+     },
+     {
+      "slot": "product",
+      "vo": "But with the Keychron Q1 HE keyboard, that's history.",
+      "visual": "A slightly wider shot of the same desk, revealing a comfortable, ergonomic chair. Ambient light from a subtle desk lamp. Still empty space in the lower middle. Mood is still focused, but with a hint of ease.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMvX1R4dWk1bFVOcFJmYkJyWVNPYWRVLmpwZw.77be2c6249c0a68c/_Txui5lUNpRfbBrYSOadU.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMjkvRTVlZnJPVzBvUmVacHliRHZmZXh3Lndhdg.c11cb91b1d0e36a8/E5efrOW0oReZpybDvfexw.wav",
+      "vo_sec": 4.58,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzcyNTI3Ny1iYWRhMGUwNTQxZjU0ZTU4YTNmZmYwYTc1YzdmNDFiYS5tcDQ.1c2c43cacc0c75de/1790277725277-bada0e0541f54e58a3fff0a75c7f41ba.mp4",
+      "clip_sec": 5.08
+     },
+     {
+      "slot": "benefit",
+      "vo": "Its magnetic switches let you customize exactly how responsive it feels.",
+      "visual": "Close-up on a hand (not the creator's face) reaching towards the empty space on the desk, as if about to type. The desk is clean and organized, with a minimalist aesthetic. Soft, natural light. Empty space in the lower middle. Mood is practical and inviting.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvNTBxTW4wNkNjOWd5bV9oVklELTNPLmpwZw.cc92e527333dbb90/50qMn06Cc9gym_hVID-3O.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvUGs4VjJkNG9RV0doVHBOX3l3eDNWLndhdg.544d1763967afba5/Pk8V2d4oQWGhTpN_ywx3V.wav",
+      "vo_sec": 4.42,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzg4MDg2Mi05YzRjNTdlNDkyNWE0ODdlOWM5M2RkZTUxMGQ0NWRkMC5tcDQ.cee91eaec78c690c/1790277880862-9c4c57e4925a487e9c93dde510d45dd0.mp4",
+      "clip_sec": 4.92
+     },
+     {
+      "slot": "cta",
+      "vo": "Try Keychron for yourself. Link in description.",
+      "visual": "A high-angle shot looking down at the desk. The monitor is visible but blurred, suggesting the user is looking away. The empty space in the lower middle is prominent. Mood is clean and inspiring, ready for a new project.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvQWdNX0piVHBCUWdEX3EzM1BlaThQLmpwZw.af935c797eedf8c3/AgM_JbTpBQgD_q33Pei8P.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvU1BWeWUxWXJSdVk0cVMtakwxdXR5Lndhdg.4a649de6c865a92b/SPVye1YrRuY4qS-jL1uty.wav",
+      "vo_sec": 3.86,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzg4NTExNy0zNWM1NTcxZTljZDQ0MjczYWY4NjZhOTY4NzEwYWJjNC5tcDQ.db670dc1d480714f/1790277885117-35c5571e9cd44273af866a968710abc4.mp4",
+      "clip_sec": 4.36
+     }
+    ],
+    "music_prompt": "Chill, lo-fi, instrumental beat with a slight tech-y feel.",
+    "cost_usd": 0.1604,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmYvdWphQTBuYkcyME5nRlQ5cUo2VndSX3RtcG5lanUyNWFwLm00YQ.77d36cb74ae294d6/ujaA0nbG20NgFT9qJ6VwR_tmpneju25ap.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk1NDk3Mi1hMmRmOWNiNDlkZmE0M2EzOGY4NDMxOTBmMTMxZjI3ZS5tcDQ.796f373c6c4be007/1790277954972-a2df9cb49dfa43a38f843190f131f27e.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODA5NTA3NS0yYmIxOGI4M2EyMTA0ZmI3OTQyYTE2YzMyNmFlZTdlNi5tcDQ.e16b23d449589827/1790278095075-2bb18b83a2104fb7942a16c326aee7e6.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODIxOTk5Ny1iZjgwY2ZiNzdhYzQ0NTA5YjY5YTRhMTNhNGZjMWVkMC5tcDQ.6f7a913de9eb8cc4/1790278219997-bf80cfb77ac44509b69a4a13a4fc1ed0.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODMwOTgxMy05Mzg5MTE3ZDA5MGY0ZjRiYjllNTExOWYyYjk2ZGZiYS5hYWM.7d7c60475841db43/1790278309813-9389117d090f4f4bb9e5119f2b96dfba.aac"
+   },
+   "video_url": "videos/b5cb482c-8e78-4e81-bec1-ddbb47b1cbc2.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTMvX1R4dWk1bFVOcFJmYkJyWVNPYWRVLmpwZw.77be2c6249c0a68c/_Txui5lUNpRfbBrYSOadU.jpg",
+   "duration_sec": 18.9,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.956Z",
+   "updated_at": "2026-09-24T19:32:26.906Z"
+  },
+  {
+   "id": "65ed38b8-3e29-44d3-a57e-b5c483ac971c",
+   "pitch_id": "03a60812-0fb5-4c03-97f2-89b1397ad4ec",
+   "idx": 2,
+   "angle": "playful",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:17 script done in 5.4s ($0.000)",
+     "19:15:17 visuals started",
+     "19:15:27 visuals done in 10.5s ($0.105)",
+     "19:15:27 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:41 audio started",
+     "19:19:47 audio done in 66.0s ($0.069)",
+     "19:19:47 motion started",
+     "19:24:35 motion done in 288.8s ($0.000)",
+     "19:24:35 mux started",
+     "19:32:43 mux done in 487.6s ($0.000)"
+    ],
+    "angle": "Playful",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "My code crashes more than my social life, but at least my desk setup is looking sharp.",
+      "visual": "A cozy, dimly lit bedroom corner. A gaming PC tower with subtle RGB glows in the background. A large monitor (screen off) is centered on a clean wooden desk. Empty space in lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvczY0XzhjU0d6ajNZQ3FCNFpJWUtJLmpwZw.66908bed3d9f4e21/s64_8cSGzj3YCqB4ZIYKI.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvcm0wX0JsaV9HTG1nZnFWZFdoYjlaLndhdg.c39e55d3fa1602c8/rm0_Bli_GLmgfqVdWhb9Z.wav",
+      "vo_sec": 5.92,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzY4NzM0NS0zOTVlNjI2N2E1Mzk0NTA4OWNhM2U2N2RhYzMwZDE4OS5tcDQ.f308a20012cf34a3/1790277687345-395e6267a53945089ca3e67dac30d189.mp4",
+      "clip_sec": 6.42
+     },
+     {
+      "slot": "product",
+      "vo": "This is the Keychron Q1 HE keyboard, and honestly, itâ€™s kinda epic.",
+      "visual": "A wider shot of the same desk. A warm, diffused light from an off-screen lamp casts soft shadows. A partially filled coffee mug is off to the side. Empty space in lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvMFVXT21YZXRtbDdfTmY1MFZsQUFrLmpwZw.80cccbdb95a987f0/0UWOmXetml7_Nf50VlAAk.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvV3F2RXFUa0NRcVZUeUUwR2pvM0pRLndhdg.86b2164761acf8a7/WqvEqTkCQqVTyE0Gjo3JQ.wav",
+      "vo_sec": 6.38,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzcwMzA4MS1iYmRiZGQwYzhhNDE0Yjg0OTIyZTQwNmZlOGM1MWE1Zi5tcDQ.92b8ceb59fd60daf/1790277703081-bbdbdd0c8a414b84922e406fe8c51a5f.mp4",
+      "clip_sec": 6.88
+     },
+     {
+      "slot": "benefit",
+      "vo": "You can adjust the actuation point, which means super precise key presses.",
+      "visual": "A closer, slightly elevated view of the desk. The monitor is now displaying a subtle code editor interface (unreadable text). A charging phone rests nearby. Empty space in lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvSXM5Z1dVTGNJaVhBQnlnM2lkQnlvLmpwZw.fe7db27583f9fc48/Is9gWULcIiXAByg3idByo.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvMFUtY0lrdlppUDFPdkFXbGNTWkpNLndhdg.b1575fe1180dd11b/0U-cIkvZiP1OvAWlcSZJM.wav",
+      "vo_sec": 5.26,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzg2NDQzMi1jYzU2MDc0YWRmMzM0MWZlYjIyNjE2ZjZmMmJlYjk4NS5tcDQ.105f6756c2b8523b/1790277864432-cc56074adf3341feb22616f6f2beb985.mp4",
+      "clip_sec": 5.76
+     },
+     {
+      "slot": "cta",
+      "vo": "If you're into that, definitely try Keychron. Link below.",
+      "visual": "A slightly pulled-back shot of the desk setup, emphasizing the overall calm and focused ambiance. A window in the background shows very faint city lights. Empty space in lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvYXJDM0hoUWFCbjRwOG0tRUhZU3hJLmpwZw.4a06d546d48292a1/arC3HhQaBn4p8m-EHYSxI.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvdWtXdnc1ZWlLRXlXNUR4OGNYVFdrLndhdg.757d251ba51b0980/ukWvw5eiKEyW5Dx8cXTWk.wav",
+      "vo_sec": 4.22,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzg3NTAyMi1jYmQ2YzdjZDY2ZTA0NzUwOTRmYzc1ZWQzZDZjMmRjMS5tcDQ.85b0a72fc44d75b3/1790277875022-cbd6c7cd66e0475094fc75ed3d6c2dc1.mp4",
+      "clip_sec": 4.72
+     }
+    ],
+    "music_prompt": "Chill, lofi hip-hop beat with a subtle synth melody.",
+    "cost_usd": 0.1741,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmUvdTRUcWlQOVBZUlpPUm4zLTRwbk1LX3RtcF84MXJiOWhjLm00YQ.d595d6281c67f377/u4TqiP9PYRZORn3-4pnMK_tmp_81rb9hc.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk1Mzc0Ni0yNDM1Njc2Yjg0NTQ0NjQwOWVmM2VmZDkzNGU1ODJmOS5tcDQ.d6239bddd7c3dfc4/1790277953746-2435676b845446409ef3efd934e582f9.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODA2NzcyMC00MWY0ZDAzZWJkMzE0MjUyOWY4MzgwNTljNzM4ZDFkZS5tcDQ.c91aca4ed12a2ea1/1790278067720-41f4d03ebd3142529f838059c738d1de.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODM0MDc4Ni05YTJjZDNjMTUwMjc0MjFmYmVhNmE1MTUxNGUwYzJiYi5tcDQ.c78b32e6719b29e4/1790278340786-9a2cd3c15027421fbea6a51514e0c2bb.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODM1ODEyMy00MGQ3YjdmN2JiMTU0ZTY2ODY0Y2YyYjhjZDE0YmZiOS5hYWM.eabafbcee040efb2/1790278358123-40d7b7f7bb154e66864cf2b8cd14bfb9.aac"
+   },
+   "video_url": "videos/65ed38b8-3e29-44d3-a57e-b5c483ac971c.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvMFVXT21YZXRtbDdfTmY1MFZsQUFrLmpwZw.80cccbdb95a987f0/0UWOmXetml7_Nf50VlAAk.jpg",
+   "duration_sec": 23.8,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.956Z",
+   "updated_at": "2026-09-24T19:32:43.541Z"
+  },
+  {
+   "id": "5f4f79a8-c432-4613-adb3-fcf5aa537bf9",
+   "pitch_id": "d7ec1e8f-4c15-4123-bb54-fbd3534d9e57",
+   "idx": 0,
+   "angle": "relatable",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:17 script done in 5.5s ($0.000)",
+     "19:15:17 visuals started",
+     "19:15:26 visuals done in 9.2s ($0.105)",
+     "19:15:26 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:42 audio started",
+     "19:20:01 audio done in 79.0s ($0.072)",
+     "19:20:01 motion started",
+     "19:25:24 motion done in 322.9s ($0.000)",
+     "19:25:24 mux started",
+     "19:32:33 mux done in 429.7s ($0.000)"
+    ],
+    "angle": "Relatable moment",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Another late night coding session, and my neighbor starts their bass guitar solo.",
+      "visual": "A dimly lit desk from a slightly elevated angle. A keyboard and mouse are visible. A monitor glows with lines of code. There's a subtle, almost invisible hum in the air. Lower middle of the frame is clear.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvRXI5em45UU9kVGJTOURoM0hDUG9hLmpwZw.1d60f3af7d1b9e52/Er9zn9QOdTbS9Dh3HCPoa.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvTy1oaXVrXzM4VFVQMHRoVEgwaXpYLndhdg.245fb377e942d2eb/O-hiuk_38TUP0thTH0izX.wav",
+      "vo_sec": 5.66,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzczOTAwNC1kNzE2MjA3OTE1YWU0ZTZiYjM2YzUyZDJiNGU3ZDQ1Yi5tcDQ.8bff9c17f5297b58/1790277739004-d716207915ae4e6bb36c52d2b4e7d45b.mp4",
+      "clip_sec": 6.16
+     },
+     {
+      "slot": "product",
+      "vo": "That's when I grab my Loop Quiet earplugs. Seriously, these things are a game changer.",
+      "visual": "A softly lit, minimalist desk setup. A half-empty mug of coffee sits next to a laptop. The background is a blurred bookshelf. The overall mood is calm and focused. Lower middle of the frame is clear.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvTjJpaF9YSkFkOXVqR18zcDFEbVdqLmpwZw.7a1a80ee164ba2da/N2ih_XJAd9ujG_3p1DmWj.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvbWZVTzJIZDBfaTNvYUM0RF9TN1FULndhdg.80354f15064e41f0/mfUO2Hd0_i3oaC4D_S7QT.wav",
+      "vo_sec": 6.3,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzc1NDYwMi05ZmU4ODM5NGZiYmE0ODlmYTAwNDllZTc4NzBlNGFhZC5tcDQ.929a1a6c9c336c33/1790277754602-9fe88394fbba489fa0049ee7870e4aad.mp4",
+      "clip_sec": 6.8
+     },
+     {
+      "slot": "benefit",
+      "vo": "They give me 24 dB of noise reduction, perfect for staying in the zone.",
+      "visual": "A close-up on a pair of hands typing fluidly on a mechanical keyboard. The light source is an off-screen desk lamp, creating soft shadows. The focus is on the action of typing. Lower middle of the frame is clear.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvNU9rV1U2RFJWRlFUR2xPQlhPT053LmpwZw.75c6ce2646d46536/5OkWU6DRVFQTGlOBXOONw.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvVGlMVnN1akxBTDg0Nk1rbXEweHdnLndhdg.e1b32c2e064c8ccc/TiLVsujLAL846Mkmq0xwg.wav",
+      "vo_sec": 5.08,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzg5NzUzNi00NDY3Yzk1MjVjM2I0YzkyOTYzOThmZmEzOGMxZTEzNy5tcDQ.651c0a6a1481d763/1790277897536-4467c9525c3b4c9296398ffa38c1e137.mp4",
+      "clip_sec": 5.58
+     },
+     {
+      "slot": "cta",
+      "vo": "If you need some peace and quiet, check out Loop. Link's in the description.",
+      "visual": "A slightly wider shot of the desk, now with a neat stack of productivity books. The light is still soft and warm. The scene feels complete and intentional. Lower middle of the frame is clear.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvRFhmMXBSVUtZcnhoVWpsOXI2YWNqLmpwZw.a961bfa4791ddd63/DXf1pRUKYrxhUjl9r6acj.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmEvcEhnMzJjQlhlNjJsOVlsSFpWMWZ2Lndhdg.263b80ddb59c7d62/pHg32cBXe62l9YlHZV1fv.wav",
+      "vo_sec": 5,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzkyMzI3NC1mMTQ5ZDlkZDQyMGE0NWU1OWFjMDRmMTQyZjIxOGJhZC5tcDQ.400cb9488a53dfac/1790277923274-f149d9dd420a45e59ac04f142f218bad.mp4",
+      "clip_sec": 5.5
+     }
+    ],
+    "music_prompt": "Chill, lofi hip-hop beat, subtle and non-distracting",
+    "cost_usd": 0.177,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmYvd200cXhuZC0yRy1aNkh2VE53bUoxX3RtcDFzZWUwdWZ1Lm00YQ.0b7b8e0ca2bb8251/wm4qxnd-2G-Z6HvTNwmJ1_tmp1see0ufu.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk1NjA5Ny00ZTc3N2E2ZGI1YmQ0OWU2ODVmZThmN2M5MThhYzEwZC5tcDQ.78eb7ef2ed2a8ecc/1790277956097-4e777a6db5bd49e685fe8f7c918ac10d.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODE0Nzc3MS1kNzgzOWY2MTFjMTQ0MWI3YjYyYTJhZTAzZTgyMDI0OC5tcDQ.9f2bd1852ae4d7a7/1790278147771-d7839f611c1441b7b62a2ae03e820248.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODI2NDQ3NC0zZGRhNGQ2M2MwNDE0NmQ5ODgzMDU1YTg3YjRjYWNlZi5tcDQ.9253230ca328876d/1790278264474-3dda4d63c04146d9883055a87b4cacef.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODMyMTE0My0xY2Q2OTlhMDcwNjA0MWE4YTg0Mzk2Y2VmNGExZTBhZi5hYWM.0bb3d301b0430f9c/1790278321143-1cd699a0706041a8a84396cef4a1e0af.aac"
+   },
+   "video_url": "videos/5f4f79a8-c432-4613-adb3-fcf5aa537bf9.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvTjJpaF9YSkFkOXVqR18zcDFEbVdqLmpwZw.7a1a80ee164ba2da/N2ih_XJAd9ujG_3p1DmWj.jpg",
+   "duration_sec": 24,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.977Z",
+   "updated_at": "2026-09-24T19:32:33.843Z"
+  },
+  {
+   "id": "fca93e0c-0e27-4666-8cf8-c5362d58c67d",
+   "pitch_id": "d7ec1e8f-4c15-4123-bb54-fbd3534d9e57",
+   "idx": 1,
+   "angle": "value",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:17 script done in 5.4s ($0.000)",
+     "19:15:17 visuals started",
+     "19:15:26 visuals done in 9.3s ($0.105)",
+     "19:15:26 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:43 audio started",
+     "19:20:10 audio done in 87.2s ($0.058)",
+     "19:20:10 motion started",
+     "19:25:34 motion done in 323.8s ($0.000)",
+     "19:25:34 mux started",
+     "19:32:40 mux done in 426.7s ($0.000)"
+    ],
+    "angle": "Straight value",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Another late night coding sesh, another battle with distractions.",
+      "visual": "A dimly lit desk with a large monitor displaying code. A warm desk lamp provides a focused glow. The background is slightly out of focus, suggesting a home office. Empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvdy02YnhVbEVPOGNSdWpMRUhuVzRrLmpwZw.10e296c32b1cfc29/w-6bxUlEO8cRujLEHnW4k.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmIvNlhqdS1kb2QzQklqOEV3NlQ3VVVpLndhdg.696eb940dfd208fa/6Xju-dod3BIj8Ew6T7UUi.wav",
+      "vo_sec": 4.62,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzc0NTYzNS0wYmI1NzRjZWNiOTE0MGUzODM4ODQ5NWRhYWI4NWExNC5tcDQ.66af8ecc40eb948c/1790277745635-0bb574cecb9140e38388495daab85a14.mp4",
+      "clip_sec": 5.12
+     },
+     {
+      "slot": "product",
+      "vo": "Thatâ€™s why Iâ€™ve been using Loop Quiet earplugs.",
+      "visual": "A close-up on a mechanical keyboard with subtle RGB lighting. The desk surface is clean and minimalist. The lighting is soft and ambient. Empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQveDF5dUtIZUJpQ2lJQktpdUlHUTd2LmpwZw.afff87289351d4dd/x1yuKHeBiCiIBKiuIGQ7v.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmIvbGVrUmJSRXhnT25rUlZCT0w2c0VoLndhdg.a89b639145ea7840/lekRbRExgOnkRVBOL6sEh.wav",
+      "vo_sec": 3.34,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzc1ODQ3Ni1jOGNkOTYyYjIzNzA0N2EyYjAyYWE1MTM2OTRhYmIwNC5tcDQ.bcc1022cb56f2d91/1790277758476-c8cd962b237047a2b02aa513694abb04.mp4",
+      "clip_sec": 3.84
+     },
+     {
+      "slot": "benefit",
+      "vo": "They give you 24 dB of noise reduction, which is a game changer for focus.",
+      "visual": "A clean, modern desk setup with a sleek laptop and a mug. Natural light streams in from a window, creating a calm, productive atmosphere. Empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvaWRZcmQ0X1dvdE8zQktXWDROX0Z6LmpwZw.5c89a470ca2ffdf9/idYrd4_WotO3BKWX4N_Fz.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmIvR29hZUxtaDQxd1RjWUZ3WWd3SzViLndhdg.6d6be38a16facac1/GoaeLmh41wTcYFwYgwK5b.wav",
+      "vo_sec": 5.62,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzkyMzI3NS1jMDQ4MzlmMDdlYzA0ODYzYmQzOTNiNTZkMzY0N2IyYy5tcDQ.5d9c4ae3bae593c7/1790277923275-c04839f07ec04863bd393b56d3647b2c.mp4",
+      "clip_sec": 6.12
+     },
+     {
+      "slot": "cta",
+      "vo": "If you want to try Loop, link is in the description.",
+      "visual": "A wide shot of a tech-filled desk. There are cables neatly managed, a second monitor, and a plant. The overall mood is organized and efficient. Empty space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvUHR5MDlxMDdhTnBFN2RKS0RXdUpkLmpwZw.cc9d87b2b882b226/Pty09q07aNpE7dJKDWuJd.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmIvMW91M21aZ2Z4dnJzSm5XdnNvNTdHLndhdg.925403d2076d0fcc/1ou3mZgfxvrsJnWvso57G.wav",
+      "vo_sec": 3.76,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzkzMjk4Ny1lYWQxMDU0MWFjMjU0NjMyODdhZWYyNWZjOGRhYzkwMi5tcDQ.094cb7816f63fb48/1790277932987-ead10541ac25463287aef25fc8dac902.mp4",
+      "clip_sec": 4.26
+     }
+    ],
+    "music_prompt": "Chill, lo-fi hip hop beat with a productive vibe",
+    "cost_usd": 0.163,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMzAvRjk3VFpMaTVUZjVmNVY4RGNGZ041X3RtcGY5MG5wazVyLm00YQ.138365fa2695730c/F97TZLi5Tf5f5V8DcFgN5_tmpf90npk5r.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk1NzU2NC05ZjljNTc4YTliMjU0MzZmOGRjZmU1NTkwNjQzNjAwOS5tcDQ.69a6f4b366723477/1790277957564-9f9c578a9b25436f8dcfe55906436009.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODE5OTc3OS05MTMwMWJlZmNkNzA0MmE2YjZjNzI2NDU2NmE2ZjE3ZC5tcDQ.4e153f96ec0f07c2/1790278199779-91301befcd7042a6b6c7264566a6f17d.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODMwNjMyMi0xOWQ2YjQ1NjZkYTg0MWZjOWEwM2Y2ZGQxNzhjNzQ1ZC5tcDQ.91f77f40f9762868/1790278306322-19d6b4566da841fc9a03f6dd178c745d.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODM0Nzk2Mi0xMDExMWYyZTkxMzk0ODk4OGQyNGUxZjU4MGUwZjNmNi5hYWM.caf735318837d6ec/1790278347962-10111f2e913948988d24e1f580e0f3f6.aac"
+   },
+   "video_url": "videos/fca93e0c-0e27-4666-8cf8-c5362d58c67d.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQveDF5dUtIZUJpQ2lJQktpdUlHUTd2LmpwZw.afff87289351d4dd/x1yuKHeBiCiIBKiuIGQ7v.jpg",
+   "duration_sec": 19.3,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.977Z",
+   "updated_at": "2026-09-24T19:32:40.979Z"
+  },
+  {
+   "id": "7b2b6d9b-0f15-452e-9832-efc9f5b6968d",
+   "pitch_id": "d7ec1e8f-4c15-4123-bb54-fbd3534d9e57",
+   "idx": 2,
+   "angle": "playful",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "19:15:11 script started",
+     "19:15:18 script done in 6.9s ($0.000)",
+     "19:15:18 visuals started",
+     "19:15:29 visuals done in 10.6s ($0.105)",
+     "19:15:29 audio started",
+     "audio failed: inworld-tts: run_capability(inworld-tts) failed: SDK /inference failed: HTTP 502 {\"detail\":{\"error\":\"pymthouse path is pinned to the live-runner orchestrator (ORCH_PIN_BY_PATH=1); LR dispatch returned",
+     "19:18:44 audio started",
+     "19:20:14 audio done in 89.7s ($0.066)",
+     "19:20:14 motion started",
+     "19:25:47 motion done in 333.3s ($0.000)",
+     "19:25:47 mux started",
+     "19:32:32 mux done in 405.6s ($0.000)"
+    ],
+    "angle": "Playful",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Another all-nighter for the grind. Sometimes I swear my brain just leaks out my ears.",
+      "visual": "A cozy, dimly lit home office at night. A large, high-resolution monitor displays lines of code. A half-empty coffee mug and some scattered notes are on a clean, light-colored desk. The shot is a medium-wide, focusing on the desk setup from a slightly elevated angle. Empty space on the desk in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvR2t4am9TVlFFTGxvQXl0YzZPVlduLmpwZw.5d0ff313d705c8c2/GkxjoSVQELloAytc6OVWn.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmIvZk9yVldvLUZkTEluczVmNVZUdWZkLndhdg.4e72db8916c96a0d/fOrVWo-FdLIns5f5VTufd.wav",
+      "vo_sec": 6.04,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzc4MDE2Ny05MmI4OGJiNmUzOTc0NzEyYjUxNDVkYTNkZmU5ZDkyMi5tcDQ.92141c2b0b3dbb97/1790277780167-92b88bb6e3974712b5145da3dfe9d922.mp4",
+      "clip_sec": 6.54
+     },
+     {
+      "slot": "product",
+      "vo": "Good thing I found Loop. As in, L-O-O-P, Loop Quiet earplugs.",
+      "visual": "The same home office setup, now with a slightly more organized desk. The monitor still shows code, but it's a bit brighter, suggesting a new burst of focus. Soft, warm overhead lighting. Medium shot, empty space on the desk in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvYzlxZl82clVYQ0pBb3AxNmhRLVU5LmpwZw.b4a1f33bcbda34e5/c9qf_6rUXCJAop16hQ-U9.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmIvZ0c5cVZIQVdHUkY4MzUya0RubnlvLndhdg.4e5b68a955559aaf/gG9qVHAWGRF8352kDnnyo.wav",
+      "vo_sec": 6.08,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3NzgwMTM0OC03ZDUyOWExZTgzMjU0NjM4OWNjOTcxMzQwNzBiNDlhZC5tcDQ.92f6fbd22e637258/1790277801348-7d529a1e832546389cc97134070b49ad.mp4",
+      "clip_sec": 6.58
+     },
+     {
+      "slot": "benefit",
+      "vo": "These little guys give me 24 dB of noise reduction. Seriously helps me focus.",
+      "visual": "The home office, now with a slightly wider shot showing more of the comfortable, minimalist surroundings. Perhaps a plant in the background or a subtle decorative item. Lighting is still soft but a little brighter, suggesting daytime or a more energetic vibe. Medium-wide shot, empty space on the desk in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvWmNmYVh2UTQ3WG9EQXdEeWJWNDA5LmpwZw.490bb271d6c62138/ZcfaXvQ47XoDAwDybV409.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmIvYXlpekNrOG5uRnNHaksyWW1oZVBsLndhdg.0736be99eaabea26/ayizCk8nnFsGjK2YmhePl.wav",
+      "vo_sec": 5.7,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk0NjUwMy1iZmE4YmU1NTZmYjY0NDQ1ODNjY2YyODNlOTRmN2JiOS5tcDQ.3f1719716aaa727b/1790277946503-bfa8be556fb6444583ccf283e94f7bb9.mp4",
+      "clip_sec": 6.2
+     },
+     {
+      "slot": "cta",
+      "vo": "If you want to try Loop, check the link below.",
+      "visual": "Back to the original dimly lit, late-night home office setup, but everything is slightly cleaner and tidier, implying a successful coding session. The monitor is still on, but perhaps displaying a completed project or a productivity app. Gentle, focused light on the desk. Medium shot, empty space on the desk in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvSHRjUUJYa3VFdGNCV3hCMWpXQVl6LmpwZw.03fdbea12ce847ea/HtcQBXkuEtcBWxB1jWAYz.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMmIvZGtWTk9PTEhOSzE3b1pwejhnZW1SLndhdg.fff07a67b30e19f2/dkVNOOLHNK17oZpz8gemR.wav",
+      "vo_sec": 3.18,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk0NjEzMy1lNjg0YjlhMWJiYjg0YjFhYWJjMDQ1ZTAzNGFiNGRiOC5tcDQ.5773d5b8a4750ee1/1790277946133-e684b9a1bbb84b1aabc045e034ab4db8.mp4",
+      "clip_sec": 3.68
+     }
+    ],
+    "music_prompt": "Chill, lofi hip-hop beat, subtle and unobtrusive.",
+    "cost_usd": 0.1712,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMzEvMGM5TGdlck56VkhVem50NTNWOHdHX3RtcGt0aGlpNW5jLm00YQ.b7c3d1f0d1c19f25/0c9LgerNzVHUznt53V8wG_tmpkthii5nc.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3Nzk4NjY0MC0yMGY5MTI1YzFkYzM0YTBkYjNjZmUwNTdjZjYwYmFmZC5tcDQ.3ae56930516aba31/1790277986640-20f9125c1dc34a0db3cfe057cf60bafd.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODEyNDg5OS03YmU2MWI1NTg1MmM0YjViODYwNzRhYzQ3ZmY3YmFmOC5tcDQ.07c2fa0850a11f86/1790278124899-7be61b55852c4b5b86074ac47ff7baf8.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODI0MTQyNy0yYTEzZTAwZTQ4Mjc0YzI2YWZjM2JjY2FlZTk4NDEyOS5tcDQ.245b8acb801c960d/1790278241427-2a13e00e48274c26afc3bccaee984129.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDI3ODMxNTc5MS1lYjM5MTE2ZTkwODM0OTEyYWEyOTk1NTczZDI5OGU3OC5hYWM.e9cc1f197900ac4a/1790278315791-eb39116e90834912aa2995573d298e78.aac"
+   },
+   "video_url": "videos/7b2b6d9b-0f15-452e-9832-efc9f5b6968d.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYmJmMTQvYzlxZl82clVYQ0pBb3AxNmhRLVU5LmpwZw.b4a1f33bcbda34e5/c9qf_6rUXCJAop16hQ-U9.jpg",
+   "duration_sec": 23,
+   "error": null,
+   "created_at": "2026-09-24T19:15:11.977Z",
+   "updated_at": "2026-09-24T19:32:32.949Z"
+  },
+  {
+   "id": "39cbae3a-ab77-4fb9-80c3-a9b2ba1a2e14",
+   "pitch_id": "d3c9ed3f-cb82-4367-8e19-2d4a1c510ac2",
+   "idx": 0,
+   "angle": "relatable",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "18:05:32 script started",
+     "18:05:39 script done in 7.6s ($0.000)",
+     "18:05:39 visuals started",
+     "18:06:01 visuals done in 21.2s ($0.105)",
+     "18:06:01 audio started",
+     "18:06:46 audio done in 45.8s ($0.066)",
+     "18:06:46 motion started",
+     "18:08:47 motion done in 121.0s ($0.000)",
+     "18:08:47 mux started",
+     "18:11:05 mux done in 137.9s ($0.000)"
+    ],
+    "angle": "Relatable moment",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "My brain feels like a dial-up modem on overload after a coding sprint.",
+      "visual": "A slightly messy, well-lit desk at night, with a soft glow from multiple monitors. Empty space is in the lower middle, in front of a keyboard. Mood is focused but tired.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjMvQUpnVXR2WnBnQTB1WTh6YzY3ODRzLmpwZw.1c289b309d74d590/AJgUtvZpgA0uY8zc6784s.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjUvVWZMSno2cHM3RXVKc0dZSFlhMTdqLndhdg.0a7e02a2e38464a7/UfLJz6ps7EuJsGYHYa17j.wav",
+      "vo_sec": 5.28,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjQ2Nzg0Ni0yOTk0NGJmOGQzNjQ0Y2NmODY3NmFhYjdjNmVkYjkxZi5tcDQ.46b659c6701c7ec8/1790532467846-29944bf8d3644ccf8676aab7c6edb91f.mp4",
+      "clip_sec": 5.78
+     },
+     {
+      "slot": "product",
+      "vo": "Thatâ€™s when I grab a Liquid Death Mountain Water.",
+      "visual": "Same desk setup, now with a laptop displaying a complex code editor. The empty space is now a slightly clearer spot on the desk next to a mouse pad. Lighting is still soft and atmospheric.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjMvbTBIVUdMeEUyY1RBQm5WT2tidGZKLmpwZw.86788833388aa471/m0HUGLxE2cTABnVOkbtfJ.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjUvNWlWWF93MWZfYkJyd0JRUmZQRGt2Lndhdg.94ce513758697279/5iVX_w1f_bBrwBQRfPDkv.wav",
+      "vo_sec": 3.24,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjQ4MDYzMy1iZjcwZDIxMDc5MjM0YjI1YTY5MTQzNmJhMTczZWE4ZC5tcDQ.d6d8612152299550/1790532480633-bf70d21079234b25a691436ba173ea8d.mp4",
+      "clip_sec": 3.74
+     },
+     {
+      "slot": "benefit",
+      "vo": "Itâ€™s pure mountain water from real American mountain ranges, in an ice cold can.",
+      "visual": "Same desk, but with a different angle, showing a mechanical keyboard and a gaming mouse. The empty space is still prominent in the lower middle, on a clean section of the desk. The mood is cool and efficient.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjMvaml3VmhrcjV0akd5WHdhMmt4UEFLLmpwZw.0ae1e889fcb66454/jiwVhkr5tjGyXwa2kxPAK.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjYvMDdMTVdOUjVEUGlyVnByMnVldWdBLndhdg.ebb471a2cc5494e7/07LMWNR5DPirVpr2ueugA.wav",
+      "vo_sec": 5.96,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjUxMDU4Ni0xYWM5YzI0OTljZjY0ODM0YTcwZGM4MDI0N2IwOGYyMy5tcDQ.5e0eef5c6ff4aa07/1790532510586-1ac9c2499cf64834a70dc80247b08f23.mp4",
+      "clip_sec": 6.46
+     },
+     {
+      "slot": "cta",
+      "vo": "If you need a refresh during your late-night grind, grab some Liquid Death. Link below.",
+      "visual": "A wider shot of the desk, showing a comfortable ergonomic chair pushed back slightly. The empty space is in the foreground, ready for the product placement. Lighting is still consistent with a late-night work session.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjMvWFV0YlJGWXJlMml3SnUxUkQyNk9vLmpwZw.5fe2abdec6bf5357/XUtbRFYre2iwJu1RD26Oo.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjYvRUlHVUtCUkVXUmI1c3QzSWZ3NVV1Lndhdg.15e8c05f341fef1a/EIGUKBREWRb5st3Ifw5Uu.wav",
+      "vo_sec": 6.2,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjUyODI5MS1lZThmMDkyYWJlZmM0NjVkODU1NWI3N2I5ZGRhNjgyMi5tcDQ.120d08045f29b65c/1790532528291-ee8f092abefc465d8555b77b9dda6822.mp4",
+      "clip_sec": 6.7
+     }
+    ],
+    "music_prompt": "Chill, slightly electronic lofi beat, consistent with late-night focus.",
+    "cost_usd": 0.1713,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjgvYUFOeENhQ0g0cGtrWnMxMmhpZ2thX3RtcDN4anV4aHN4Lm00YQ.09005088e1c54716/aANxCaCH4pkkZs12higka_tmp3xjuxhsx.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjUzMTk5OC0xM2M1YjNkZDdiNTY0NmZlYmUxZGYxYWU1MGI1ZjczMi5tcDQ.c2745677a665690c/1790532531998-13c5b3dd7b5646febe1df1ae50b5f732.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjU5MTk0NC1lZGE0MjNhZTNkNzA0MTRjOWNkNjI4MzZlZTNmM2FiMC5tcDQ.34d957dca4fef68b/1790532591944-eda423ae3d70414c9cd62836ee3f3ab0.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjY1MTEyNC05M2M1MjY4Y2QyYzc0ZGE4YmU4NThiMmJlMTg3ZTRkMC5tcDQ.3f5631f37762a8b5/1790532651124-93c5268cd2c74da8be858b2be187e4d0.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjY1NzY5MC1jMDJlMjk4Y2JlZTg0YTJlYTgwMjA5MmNiMzJiOTIwMy5hYWM.2d33f9827b235bf0/1790532657690-c02e298cbee84a2ea802092cb32b9203.aac"
+   },
+   "video_url": "videos/39cbae3a-ab77-4fb9-80c3-a9b2ba1a2e14.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjMvbTBIVUdMeEUyY1RBQm5WT2tidGZKLmpwZw.86788833388aa471/m0HUGLxE2cTABnVOkbtfJ.jpg",
+   "duration_sec": 22.7,
+   "error": null,
+   "created_at": "2026-09-27T18:05:32.224Z",
+   "updated_at": "2026-09-27T18:11:05.784Z"
+  },
+  {
+   "id": "eca8d276-a4d9-4819-839b-790e5e098a73",
+   "pitch_id": "d3c9ed3f-cb82-4367-8e19-2d4a1c510ac2",
+   "idx": 1,
+   "angle": "value",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "18:05:32 script started",
+     "18:05:39 script done in 7.5s ($0.000)",
+     "18:05:39 visuals started",
+     "18:05:53 visuals done in 13.7s ($0.105)",
+     "18:05:53 audio started",
+     "18:06:34 audio done in 41.1s ($0.061)",
+     "18:06:34 motion started",
+     "18:08:30 motion done in 116.3s ($0.000)",
+     "18:08:30 mux started",
+     "18:10:37 mux done in 127.1s ($0.000)"
+    ],
+    "angle": "Straight value",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Alright, so if you're trying to optimize your hydration, I found something that just makes sense.",
+      "visual": "Afrin's desk setup at night, bathed in the soft glow of multiple monitor screens. A half-eaten snack bar wrapper is near a keyboard. The focus is on the warm, inviting light and the 'working late' atmosphere, with clear space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvYTA3OTROZi1kTlVKRHV4SWRVWE1DLmpwZw.4c39ec5e98c4c7c6/a0794Nf-dNUJDuxIdUXMC.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjQvR05rYXBjTkhCcUpaRXZwS0U3dFlELndhdg.8620ab9c8784a71c/GNkapcNHBqJZEvpKE7tYD.wav",
+      "vo_sec": 6.84,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjQyMTA3MS01NzQ4OWZmMGIzN2U0ZmQ0YmRkYzI4MGEzZWVhZjM5Ni5tcDQ.3a01e947d17faa89/1790532421071-57489ff0b37e4fd4bddc280a3eeaf396.mp4",
+      "clip_sec": 7.34
+     },
+     {
+      "slot": "product",
+      "vo": "I'm talking about Liquid Death Mountain Water.",
+      "visual": "A slightly wider shot of the desk setup, showing more of the organized chaos. A comfortable, ergonomic chair is partially visible. The overall mood is focused and productive, with clear space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvY21vWDlaa053TU5aWXB0ODNfaGZmLmpwZw.701dbfcbb85587ef/cmoX9ZkNwMNZYpt83_hff.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjUvSXByazZacHhxVGdqVUZQN1hfZF9pLndhdg.77300cb5570cee79/Iprk6ZpxqTgjUFP7X_d_i.wav",
+      "vo_sec": 3.9,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjQ0NTE5OS1hZTMzMmZhM2RjNDQ0N2U2OTkwY2VhMmMzNzY3MTE3Mi5tcDQ.233b51f7556c01db/1790532445199-ae332fa3dc4447e6990cea2c37671172.mp4",
+      "clip_sec": 4.4
+     },
+     {
+      "slot": "benefit",
+      "vo": "It comes in ice cold, infinitely recyclable cans.",
+      "visual": "A close-up of a neatly organized section of Afrin's desk, perhaps showing a few perfectly aligned productivity gadgets. Soft, indirect light from an unseen window creates a calming, intentional feel, with clear space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvUTE5RU9BYzh2czU0VW1yUlBCMUhELmpwZw.8719808c738c64a9/Q19EOAc8vs54UmrRPB1HD.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjUva0NkWVpTT1FHZmxiRTdRV0lvaHA3Lndhdg.9986299449e43074/kCdYZSOQGflbE7QWIohp7.wav",
+      "vo_sec": 3.98,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjUxMTE1MS1hZTQxNWE1MjA3ZDI0MzY2OGMwMzAzYjFjNWYxODI5OS5tcDQ.8e1f66e50cb90326/1790532511151-ae415a5207d243668c0303b1c5f18299.mp4",
+      "clip_sec": 4.48
+     },
+     {
+      "slot": "cta",
+      "vo": "So if you're looking for an upgrade, go check out Liquid Death.",
+      "visual": "Afrin's hand briefly reaching for a mouse or keyboard in the same desk setup, but the focus remains on the overall environment and the ambient lighting. The scene conveys a sense of continuation and workflow, with clear space in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjMvSTFKalQxTzgzMjBYN0FjZ1N1NUx2LmpwZw.2d256152d94db7b6/I1JjT1O8320X7AcgSu5Lv.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjUvNkZPVWlkbDhJQXFWQ2Y3b3VqS185Lndhdg.a6d46827f0a67bea/6FOUidl8IAqVCf7oujK_9.wav",
+      "vo_sec": 4,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjUxMTE1Mi01MDZmNzYzMDQ3YmI0MjY1YTRlZTMwM2E4NTYyMDM3NS5tcDQ.5ceccb7a0184e129/1790532511152-506f763047bb4265a4ee303a85620375.mp4",
+      "clip_sec": 4.5
+     }
+    ],
+    "music_prompt": "Chill lofi hip-hop beat, subtle and non-distracting",
+    "cost_usd": 0.1659,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjcvR09ONGRoa0g0NkFZMHFvSzZ0UHdnX3RtcGUxamI5eTY2Lm00YQ.35cd4a8b888a6543/GON4dhkH46AY0qoK6tPwg_tmpe1jb9y66.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjUxNzczOC0xZDU2YjZkNzcxYjM0MDA3OTMyZWI2ZWU0YjUwMjQ2MS5tcDQ.832b24d165732f47/1790532517738-1d56b6d771b34007932eb6ee4b502461.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjU0OTkyMy00M2Y4YjI5MGFmNjE0Y2ZiODFkNWY2ZjBmODBjM2FhYi5tcDQ.096552400374ccbf/1790532549923-43f8b290af614cfb81d5f6f0f80c3aab.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjYwODcxNC1hNDRjOWZlOGYzNGE0MjBiYjQ3YWE1NjRjMGFkMzliNi5tcDQ.da0085abf6f620d3/1790532608714-a44c9fe8f34a420bb47aa564c0ad39b6.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjYyNzk5OC0wMTFlOGQ1YTUwODY0YmI2OGY4ODQ2NjMwZDQ3NmNhNC5hYWM.f4e0e1b4682b0065/1790532627998-011e8d5a50864bb68f8846630d476ca4.aac"
+   },
+   "video_url": "videos/eca8d276-a4d9-4819-839b-790e5e098a73.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvY21vWDlaa053TU5aWXB0ODNfaGZmLmpwZw.701dbfcbb85587ef/cmoX9ZkNwMNZYpt83_hff.jpg",
+   "duration_sec": 20.7,
+   "error": null,
+   "created_at": "2026-09-27T18:05:32.224Z",
+   "updated_at": "2026-09-27T18:10:37.915Z"
+  },
+  {
+   "id": "858f2717-dd79-4725-bea0-87b26dee5290",
+   "pitch_id": "d3c9ed3f-cb82-4367-8e19-2d4a1c510ac2",
+   "idx": 2,
+   "angle": "playful",
+   "status": "done",
+   "step": null,
+   "assets": {
+    "log": [
+     "18:05:32 script started",
+     "18:05:39 script done in 7.4s ($0.000)",
+     "18:05:39 visuals started",
+     "18:05:47 visuals done in 7.7s ($0.105)",
+     "18:05:47 audio started",
+     "18:06:33 audio done in 46.1s ($0.052)",
+     "18:06:33 motion started",
+     "18:08:12 motion done in 99.1s ($0.000)",
+     "18:08:12 mux started",
+     "18:10:40 mux done in 148.1s ($0.000)"
+    ],
+    "angle": "Playful",
+    "beats": [
+     {
+      "slot": "hook",
+      "vo": "Alright, another 3AM debugging session. This is getting ridiculous.",
+      "visual": "A dimly lit home office desk, bathed in the soft glow of multiple computer monitors displaying lines of code. A wireless mechanical keyboard and a gaming mouse are prominently featured. The mood is focused and late-night, with a clear empty space on the desk in the lower middle.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvQ2lObXp6aXZVSlQ0UlpqVERPVHowLmpwZw.b5891d40ad88978d/CiNmzzivUJT4RZjTDOTz0.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjQvQVNlSHZlSmE2Q2dpN3lZdDdxd2hRLndhdg.4b4e235598c4a49c/ASeHveJa6Cgi7yYt7qwhQ.wav",
+      "vo_sec": 5.74,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjQ0NTE5OS02NWEwZTkyNWNjY2E0ZjMxODZhY2NkMmZiMzVhMTA2OC5tcDQ.0510d99200cf256e/1790532445199-65a0e925ccca4f3186accd2fb35a1068.mp4",
+      "clip_sec": 6.24
+     },
+     {
+      "slot": "product",
+      "vo": "Thank goodness for Liquid Death Mountain Water.",
+      "visual": "The same home office desk, now with a slightly wider shot revealing a comfortable, ergonomic office chair. The monitor light casts subtle reflections on the desk surface. The empty space for the product remains central.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvR0dUdmh0M3dXLTNrbVpad0M2VUQ1LmpwZw.76d4956389e52658/GGTvht3wW-3kmZZwC6UD5.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjQvT2JyMEVYaWlMZkNmTnNmejdQTHg5Lndhdg.b19813a5548b1a47/Obr0EXiiLfCfNsfz7PLx9.wav",
+      "vo_sec": 2.92,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjQwNTAwNS1iOGQwYjA4ZDEzYzI0M2ZmOWQ1NzAzN2U4ZGVjOWY5OS5tcDQ.a97352b44034c85c/1790532405005-b8d0b08d13c243ff9d57037e8dec9f99.mp4",
+      "clip_sec": 3.42
+     },
+     {
+      "slot": "benefit",
+      "vo": "Itâ€™s real mountain water from American ranges.",
+      "visual": "A close-up of a meticulously organized section of the desk. A high-end soldering iron stand and a few small, neatly arranged circuit boards are visible. The lighting is still dim and focused, maintaining the late-night tech vibe, with the empty product space.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvdlhOWHdRcTlBc0lmMHZaUW5seWViLmpwZw.6c37e119b13d3867/vXNXwQq9AsIf0vZQnlyeb.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjQvREpMb2ZRMTFWdXNSeGZkNGNEcmhKLndhdg.b45c026dbe753edd/DJLofQ11VusRxfd4cDrhJ.wav",
+      "vo_sec": 3.36,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjQ1NDI1OS05MjJiZmRhZjc3YWM0ODEyYmU1N2ZiYjgwNGExMGIwNC5tcDQ.0e9055025312ff12/1790532454259-922bfdaf77ac4812be57fbb804a10b04.mp4",
+      "clip_sec": 3.86
+     },
+     {
+      "slot": "cta",
+      "vo": "You guys gotta try Liquid Death. Link below.",
+      "visual": "A slightly pulled-back shot of the entire desk setup, showcasing the cohesive, minimalist aesthetic. The monitors are still on, and a faint reflection of the creator's silhouette might be visible on one. The mood is calm and productive, with the clear empty space for the product in the foreground.",
+      "frame_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvaElKbG92WlBYQkZmYzZNTEEyRGVkLmpwZw.4cf9f22689244fd8/hIJlovZPXBFfc6MLA2Ded.jpg",
+      "vo_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjQvMkZObXpjcnRsZkV0U2FUcmxNS2dtLndhdg.7e6e453e9573f16d/2FNmzcrtlfEtSaTrlMKgm.wav",
+      "vo_sec": 3.5,
+      "clip_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjQ5MzA5Ni05NDBkM2MzZmQ2Y2E0MDgzODUxMmRiYjY5ZTVkMTEyZS5tcDQ.c4fdf2265f12fdc0/1790532493096-940d3c3fd6ca40838512dbb69e5d112e.mp4",
+      "clip_sec": 4
+     }
+    ],
+    "music_prompt": "Lo-fi hip-hop beat with a chill, productive vibe",
+    "cost_usd": 0.1575,
+    "music_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjcvcHFFWGFqOFhxZE4xNW83SVhZbVZNX3RtcF9rbGJtZTU4Lm00YQ.3ae4f1daa6f85127/pqEXaj8XqdN15o7IXYmVM_tmp_klbme58.m4a",
+    "concat_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjUxNTgxNi03OWI4NDdkNGUxN2Q0NmEzYTUwZTVhNWQwMGE0Zjc1ZS5tcDQ.08d4a274c83e21a6/1790532515816-79b847d4e17d46a3a50e5a5d00a4f75e.mp4",
+    "overlay_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjU5MTk0NC1iM2U2YjI1NDlkMTc0ZjkyOGM4MDlmNGE1OTg4YzY2Ni5tcDQ.9eea1ba0a820f3e0/1790532591944-b3e6b2549d174f928c809f4a5988c666.mp4",
+    "captioned_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjYyMzgwMC02M2MwOTJlYzJjMGU0ODdiOTk0MDNlNzA0ZGI3MmQ2YS5tcDQ.956dfd11c3f206d7/1790532623800-63c092ec2c0e487b99403e704db72d6a.mp4",
+    "mix_url": "https://agent.livepeer.org/a/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0b3J5Ym9hcmQtdXBsb2Fkcy90b29sLW91dHB1dHMvMTc5MDUzMjYzMTc2Mi1iNjhhZmVhMzNiZTU0ZWMwOGE1MmQwZDQ2OGQwM2NlYy5hYWM.134d8cca1198ac4b/1790532631762-b68afea33be54ec08a52d0d468d03cec.aac"
+   },
+   "video_url": "videos/858f2717-dd79-4725-bea0-87b26dee5290.mp4",
+   "thumb_url": "https://agent.livepeer.org/a/aHR0cHM6Ly92M2IuZmFsLm1lZGlhL2ZpbGVzL2IvMGFhYzIyYjIvR0dUdmh0M3dXLTNrbVpad0M2VUQ1LmpwZw.76d4956389e52658/GGTvht3wW-3kmZZwC6UD5.jpg",
+   "duration_sec": 17.5,
+   "error": null,
+   "created_at": "2026-09-27T18:05:32.224Z",
+   "updated_at": "2026-09-27T18:10:40.724Z"
+  }
+ ]
+}
